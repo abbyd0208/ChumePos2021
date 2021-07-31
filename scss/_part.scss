@@ -1,0 +1,112 @@
+.bg-primary {
+    background-color: $primary-color !important;
+  }
+  
+  .bg-primary-30 {
+    background-color: $primary-color-30 !important;
+  }
+  
+  .bg-primary-20 {
+    background-color: $primary-color-20 !important;
+  }
+  
+  .bg-primary-5 {
+    background-color: $primary-color-5 !important;
+  }
+  
+  .bg-secondary {
+    background-color: $secondary-color !important;
+  }
+  
+  
+  .bg-gray {
+    background-color: $main-gray !important;
+  }
+
+  .bg-lighten-gray {
+    background-color: $light-gray !important;
+  }
+
+
+// 按鈕 ============
+.btn_block {
+   border:1px solid green;
+    margin: 1.5rem 0px;
+    @include Dflex-alignCenter;
+    .btn{
+        // display: inline-block;
+        &:not(:nth-of-type(1)){ margin-left: 1rem;}
+    }
+
+   
+}
+  
+.btn {
+    display: block;
+    letter-spacing: 2px;
+    &.bg-primary{
+        color: $white;
+    }
+    &.bg-secondary{
+        color: $dark;
+        &.active{
+                @include theme-colors(basic-theme)
+        }
+    }
+    &.bg-gray{
+        color:$white;
+    }
+
+    &.shadow-basic{
+        &.active{
+            box-shadow: none;
+            @include theme-colors(basic-theme)
+        }
+    }
+
+    &.btn-lg{
+        padding: 1.2rem ;
+    }
+
+    
+}
+
+// 初始化icon
+._icon{
+    margin-right: 0.5rem;
+    svg{
+        @include icon($primary-light,inherit);
+    }
+}
+
+._iconBg{
+    margin-right: 0.5rem;
+    @include iconBg( $primary-light, 100%,1.5rem);
+    svg{
+        @include icon($white,0.8rem);
+    }
+}
+
+// 產品列表按鈕
+.btn_list{
+    a{ @include flex-spaceBetween;}
+    // 預設按鈕樣式
+    ._iconBg{
+        @include iconBg( $primary, 0.25rem,1.5rem);
+    }
+    // 點擊按鈕樣式
+    .active{
+        ._iconBg{
+            @include iconBg( $white, 0.25rem,1.5rem);
+            svg{
+                @include icon($primary,0.8rem);
+            }
+        }
+    }
+}
+  
+
+
+
+
+
