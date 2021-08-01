@@ -92,7 +92,8 @@ input::placeholder {
 .shadow-basic,
 .tab_menu,
 .block_content ,
-.btn.shadow-basic
+.btn.shadow-basic,
+.item_group
 {
   @extend %basic-shadow;
 }

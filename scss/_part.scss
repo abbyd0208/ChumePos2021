@@ -73,10 +73,11 @@
 
 // 初始化icon
 ._icon{
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; display: inline-block;
     svg{
         @include icon($primary-light,inherit);
     }
+    img{ display: inline-block;}
 }
 
 ._iconBg{
@@ -105,7 +106,7 @@
     }
 }
   
-
+// 分頁
 .pager_block{
     // border: 1px solid green;
     @include flex-spaceBetween;
@@ -128,5 +129,19 @@
     }
 }
 
-
+// .order_list
+.order_list{
+    border: 1px solid #666;
+    *{ border: 1px solid #666;}
+    .item_group{
+       display: flex; align-items: center; margin-bottom: 30px; padding: 1rem;
+    }
+    .item{
+        color: #000;
+        width: 100%;
+        ._icon{
+            img{ width: 45px; height: 45px;}
+        }
+    }
+}
 
