@@ -146,6 +146,15 @@
   }
 }
 
+//按鈕父層wrap
+@mixin btn-wrap($size,$sizetb,$sizelr){
+ @include border-radius($size);
+  padding: $sizetb $sizelr;
+
+}
+
+
+
 //長寬
 @mixin size($w, $h) {
   width: $w;

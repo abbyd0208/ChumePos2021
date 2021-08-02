@@ -13,13 +13,13 @@
 }
 
 body {
-  font-family: $font-family-sans-serif;
+  font-family:'Roboto', 'Noto Sans TC',  $font-family-sans-serif;
   overflow-x: hidden;
   line-height: 1.8;
   position: relative;
-  @include media-breakpoint-down(md) {
-    font-size: 0.9rem;
-  }
+
+    //ga 0803 測試放大用
+  // font-size:2rem;
 
   &.fixed {
     overflow: hidden;
@@ -38,14 +38,6 @@ a:hover{
   text-decoration:none;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-
-  li {
-    list-style-type: none;
-  }
-}
 
 .web-display {
   @include web-display;

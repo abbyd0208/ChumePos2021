@@ -1,147 +1,375 @@
 .bg-primary {
     background-color: $primary-color !important;
-  }
-  
-  .bg-primary-30 {
-    background-color: $primary-color-30 !important;
-  }
-  
-  .bg-primary-20 {
-    background-color: $primary-color-20 !important;
-  }
-  
-  .bg-primary-5 {
-    background-color: $primary-color-5 !important;
-  }
-  
-  .bg-secondary {
-    background-color: $secondary-color !important;
-  }
-  
-  
-  .bg-gray {
-    background-color: $main-gray !important;
-  }
+}
 
-  .bg-lighten-gray {
+.bg-primary-30 {
+    background-color: $primary-color-30 !important;
+}
+
+.bg-primary-20 {
+    background-color: $primary-color-20 !important;
+}
+
+.bg-primary-5 {
+    background-color: $primary-color-5 !important;
+}
+
+.bg-secondary {
+    background-color: $secondary-color !important;
+}
+
+
+.bg-gray {
+    background-color: $main-gray !important;
+}
+
+.bg-lighten-gray {
     background-color: $light-gray !important;
-  }
+}
 
 
 // 按鈕 ============
 .btn_block {
-   border:1px solid green;
+    border: 1px solid green;
     margin: 1.5rem 0px;
     @include Dflex-alignCenter;
-    .btn{
+
+    .btn {
+
         // display: inline-block;
-        &:not(:nth-of-type(1)){ margin-left: 1rem;}
+        &:not(:nth-of-type(1)) {
+            margin-left: 1rem;
+        }
     }
 
-   
+
 }
-  
+
 .btn {
     display: block;
     letter-spacing: 2px;
-    &.bg-primary{
+
+
+    //ga 0803 測試放大用
+    // font-size: inherit !important; //調整為預設
+    // @include border-radius(10px);
+    // padding: 1rem 1.5rem;
+
+    &.bg-primary {
         color: $white;
     }
-    &.bg-secondary{
+
+    &.bg-secondary {
         color: $dark;
-        &.active{
-                @include theme-colors(basic-theme)
+
+        &.active {
+            @include theme-colors(basic-theme)
         }
     }
-    &.bg-gray{
-        color:$white;
+
+    &.bg-gray {
+        color: $white;
     }
 
-    &.shadow-basic{
-        &.active{
+    &.shadow-basic {
+        &.active {
             box-shadow: none;
             @include theme-colors(basic-theme)
         }
     }
 
-    &.btn-lg{
-        padding: 1.2rem ;
+    &.btn-lg {
+        padding: 1.2rem;
     }
 
-    
+    &.btn-md {
+        padding: 1rem;
+    }
+
 }
 
 // 初始化icon
-._icon{
-    margin-right: 0.5rem; display: inline-block;
-    svg{
-        @include icon($primary-light,inherit);
+._icon {
+    margin-right: 0.5rem;
+    display: inline-block;
+
+    svg {
+        @include icon($primary-light, inherit);
     }
-    img{ display: inline-block;}
+
+    img {
+        display: inline-block;
+    }
 }
 
-._iconBg{
+._iconl {
+    margin-left: 0.5rem;
+    display: inline-block;
+
+    svg {
+        @include icon($primary-light, inherit);
+    }
+
+    img {
+        display: inline-block;
+    }
+}
+
+._iconBg {
     margin-right: 0.5rem;
-    @include iconBg( $primary-light, 100%,1.5rem);
-    svg{
-        @include icon($white,0.8rem);
+    @include iconBg($primary-light, 100%, 1.5rem);
+
+    svg {
+        @include icon($white, 0.8rem);
     }
 }
 
 // 產品列表按鈕
-.btn_list{
-    a{ @include flex-spaceBetween;}
-    // 預設按鈕樣式
-    ._iconBg{
-        @include iconBg( $primary, 0.25rem,1.5rem);
+.btn_list {
+    border: 2px solid yellowgreen;
+    @include btn-wrap(.5rem, 20px, 15px);
+    background-color: $white;
+
+    a {
+        @include flex-spaceBetween;
+
     }
+
+    // 預設按鈕樣式
+    ._iconBg {
+        @include iconBg($primary, 0.25rem, 1.7rem);
+
+        svg {
+            @include icon($white, 1.1rem);
+        }
+    }
+
     // 點擊按鈕樣式
-    .active{
-        ._iconBg{
-            @include iconBg( $white, 0.25rem,1.5rem);
-            svg{
-                @include icon($primary,0.8rem);
+    .active {
+        ._iconBg {
+            @include iconBg($white, 0.25rem, 1.7rem);
+
+            svg {
+                @include icon($primary, 1.1rem);
             }
         }
     }
 }
-  
+
 // 分頁
-.pager_block{
+.pager_block {
     // border: 1px solid green;
     @include flex-spaceBetween;
     margin: 30px 0;
+
     // *{ border:1px solid #000;}
-    .page{
-        a{ width: 30px; height: 30px; line-height: 30px; vertical-align: middle; text-align: center; margin: 0 0.25rem; border-radius: 5px;}
+    .page {
+        a {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            vertical-align: middle;
+            text-align: center;
+            margin: 0 0.25rem;
+            border-radius: 5px;
+        }
+
         @include Dflex-alignCenter;
-        .active{
+
+        .active {
             background-color: $primary;
             color: $white;
         }
     }
 
-    .disable{ 
+    .disable {
         color: $main-gray;
-        ._icon{ 
-            svg{color: $main-gray;}
+
+        ._icon {
+            svg {
+                color: $main-gray;
+            }
         }
     }
 }
 
 // .order_list
-.order_list{
+.order_list {
     border: 1px solid #666;
-    *{ border: 1px solid #666;}
-    .item_group{
-       display: flex; align-items: center; margin-bottom: 30px; padding: 1rem;
+
+    * {
+        border: 1px solid #666;
     }
-    .item{
+
+    .item_group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        padding: 1rem;
+    }
+
+    .item {
         color: #000;
         width: 100%;
-        ._icon{
-            img{ width: 45px; height: 45px;}
+
+        ._icon {
+            img {
+                width: 45px;
+                height: 45px;
+            }
         }
     }
 }
 
+
+
+//菜單卡片
+
+.card_list {
+    border: 2px solid yellowgreen;
+    @include btn-wrap(.5rem, 20px, 15px);
+
+    a+a {
+        margin-bottom: .5rem
+    }
+
+    .card_title,
+    .card_body {
+        @include flex-spaceBetween;
+    }
+
+    h6 {
+        margin: 0;
+    }
+
+    ul {
+        margin-top: 5px;
+        margin-bottom: 0;
+        @include Dflex-alignCenter;
+
+        li {
+            margin-right: 5px;
+            font-size: 1.1rem;
+
+            &::before {
+                content: "·";
+            }
+
+        }
+    }
+
+    ._delete {
+        align-self: flex-end;
+    }
+
+    .card_title h6,
+    .card_body ul {
+        width: calc(85% - 20px);
+        text-align: left;
+    }
+
+    .card_title p,
+    .card_body ._delete {
+        width: 15%;
+        text-align: right;
+
+    }
+
+    // 預設按鈕樣式
+    ._iconBg {
+        // margin-right: 0;
+        @include iconBg($primary, 0.25rem, 2.5rem);
+
+        svg {
+            @include icon($white, 1.6rem);
+        }
+    }
+
+}
+
+
+//header
+
+.header {
+    @include Dflex-alignCenter;
+    color: $main-gray;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 30px;
+
+    .info {
+        @include Dflex-alignCenter;
+
+        * {
+            margin-bottom: 0;
+        }
+
+    }
+
+    ._icon {
+        font-size: 1.8rem;
+    }
+
+    ._account {
+        color: $main-gray;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin-left: auto;
+    }
+}
+
+
+//小鍵盤
+.numpad {
+    // padding: 30px;
+    background-color: pink;
+    width: max-content;
+    // width: 500px;
+
+     >.row, >.row .row{
+         margin-right: 0;
+         margin-left: 0;
+     }
+
+    .btn {
+        @include border-radius(10px);
+        font-size: 4.7rem;
+        line-height: 112px;
+        width: 120px;
+        height: 120px;
+        margin-bottom: .5rem;
+        margin-right: .5rem;
+        overflow: hidden;
+        svg{
+           width: 4.5rem;
+        }
+    }
+
+    .result{
+        background-color: $white;
+        @include border-radius(10px);
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 1rem;
+        text-align: right;
+        color: $main-gray;
+        font-weight: bold;
+    }
+    .numbers{
+        max-width:384px;
+    }
+    .controlers{
+        max-width:130px;
+        .btn{
+            margin-right: 0;
+        }
+        ._enter{
+            height: 376px;
+            font-size: 3.5rem;
+            @include Dflex-alignCenter;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
