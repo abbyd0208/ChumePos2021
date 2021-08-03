@@ -42,7 +42,7 @@ $primary-color-5: rgba(0, 204, 204, 0.1) !default;
 // adapting to different screen sizes, for use in media queries.
 
 // Assumes the browser default, typically 1rem = `16px`; 1.2rem ~= 19.2;
-$font-size-base:1.2rem;
+$font-size-base:1.5rem !default;
 
 $grid-breakpoints: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -84,14 +84,14 @@ $container-max-widths: map-merge(
 
 
 //----------文字優雅降級
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
+// @function calculateRem($size) {
+//   $remSize: $size / 16px;
+//   @return $remSize * 1.5rem;
+// }
+// @mixin font-size($size) {
+//   font-size: $size;
+//   font-size: calculateRem($size);
+// }
 //usage
 // .example-font-size {
 //     @include font-size(14px)

@@ -293,9 +293,15 @@
 .header {
     @include Dflex-alignCenter;
     color: $main-gray;
-    padding: 15px;
+    position: fixed;
+    top: 0;
+    left:50%;
+    transform: translateX(-50%);
+    width: 2160px;
+    padding: 20px;
     border-radius: 0 0 10px 10px;
     margin-bottom: 30px;
+    // background-color: $white;
 
     .info {
         @include Dflex-alignCenter;
@@ -316,6 +322,7 @@
         align-items: center;
         font-weight: bold;
         margin-left: auto;
+        // font-size:1.2rem;
     }
 }
 

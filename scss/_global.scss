@@ -14,12 +14,11 @@
 
 body {
   font-family:'Roboto', 'Noto Sans TC',  $font-family-sans-serif;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   line-height: 1.8;
   position: relative;
+  font-size:150%;  //font-basic 24px
 
-    //ga 0803 測試放大用
-  // font-size:2rem;
 
   &.fixed {
     overflow: hidden;
@@ -90,5 +89,11 @@ input::placeholder {
   @extend %basic-shadow;
 }
 
-
+.content{
+  border: 5px solid hotpink;
+  width:2160px;
+  height: 1620px;
+  margin: 0 auto;
+  // overflow: hidden;
+}
 
