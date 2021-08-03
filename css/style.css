@@ -11646,6 +11646,7 @@ body {
   line-height: 1.8;
   position: relative;
   font-size: 150%;
+  border: 3px solid blue;
 }
 body.fixed {
   overflow: hidden;
