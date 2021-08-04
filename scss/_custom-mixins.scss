@@ -147,6 +147,7 @@
 }
 
 //按鈕父層wrap
+// border-radius,paddingtb,paddinglr
 @mixin btn-wrap($size,$sizetb,$sizelr){
  @include border-radius($size);
   padding: $sizetb $sizelr;

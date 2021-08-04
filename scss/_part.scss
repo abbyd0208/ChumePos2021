@@ -79,11 +79,11 @@
     }
 
     &.btn-lg {
-        padding: 1.2rem;
+        padding:  1.5rem;
     }
 
     &.btn-md {
-        padding: 1rem;
+        padding: 1.2rem;
     }
 
 }
@@ -127,7 +127,9 @@
 // 產品列表按鈕
 .btn_list {
     border: 2px solid yellowgreen;
-    @include btn-wrap(.5rem, 20px, 15px);
+
+    // border-radius,paddingtb,paddinglr
+    @include btn-wrap(1rem, 20px, 15px);
     background-color: $white;
 
     a {
@@ -137,20 +139,20 @@
 
     // 預設按鈕樣式
     ._iconBg {
-        @include iconBg($primary, 0.25rem, 1.7rem);
+        @include iconBg($primary, 0.5rem, 3rem);
 
         svg {
-            @include icon($white, 1.1rem);
+            @include icon($white, 2rem);
         }
     }
 
     // 點擊按鈕樣式
     .active {
         ._iconBg {
-            @include iconBg($white, 0.25rem, 1.7rem);
+            @include iconBg($white, 0.5rem, 3rem);
 
             svg {
-                @include icon($primary, 1.1rem);
+                @include icon($primary, 2rem);
             }
         }
     }
@@ -293,6 +295,7 @@
 .header {
     @include Dflex-alignCenter;
     color: $main-gray;
+    background-color: $white;
     position: fixed;
     top: 0;
     left:50%;
@@ -382,4 +385,28 @@
 }
 
 
-//test0803gaga
+// C.2開始點餐
+.order_block{
+    .btn_block{
+        overflow-x: scroll;
+        // overflow-y:hidden ;
+        max-height: 200px;
+        width: 1383.33px;
+        // display: flex;
+        // flex-wrap: wrap;
+        padding-bottom: 0px;
+        margin-bottom: 15px;
+        margin-top: 0;
+        a{
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+    }
+    .right_box{
+        .col-6{
+            height: calc(100% - 230px);
+        }
+    }
+   
+}

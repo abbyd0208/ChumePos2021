@@ -19,7 +19,7 @@ body {
   position: relative;
   font-size:150%;  //font-basic 24px
   // abby
-  border: 3px solid blue; 
+  // border: 3px solid blue; 
 
 
   &.fixed {
@@ -48,6 +48,17 @@ a:hover{
   @include mob-display;
 }
 
+.btn{
+
+  // 0804ga照layout調整
+  @include border-basic-radius(1rem);
+  padding: 1.2rem 1.8rem;
+}
+
+.btn-block + .btn-block {
+  margin-top: 1rem;
+}
+
 // 文字 ============
 //h1~p降級 < 768px
 @include media-breakpoint-down(sm) {
@@ -73,7 +84,7 @@ input::placeholder {
   @extend %basic-shadow;
   background-color: $white;
   padding: 15px;
-  @include border-basic-radius(10px);
+  @include border-basic-radius(1rem); //0804ga調整
 }
 
 .dflex {
@@ -91,11 +102,21 @@ input::placeholder {
   @extend %basic-shadow;
 }
 
+
+
 .content{
   border: 5px solid hotpink;
+  background-color: $bg-gray;
   width:2160px;
   height: 1620px;
   margin: 0 auto;
   // overflow: hidden;
 }
 
+
+.inner_content{
+  padding:  0 15px 15px;
+  margin-top: 150px;
+  @include Dflex;
+  height: -webkit-fill-available; //div填滿高度
+}
