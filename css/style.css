@@ -8915,6 +8915,63 @@ input::placeholder {
     color: #fff;
     font-size: 0.8rem; }
 
+.button_switch {
+  font-size: 1em;
+  width: 8rem;
+  height: 3.5rem;
+  position: relative; }
+  .button_switch .switch {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 0;
+    font-size: 1em;
+    left: 0;
+    line-height: 0;
+    outline: none;
+    position: absolute;
+    top: 0;
+    width: 0; }
+    .button_switch .switch:before, .button_switch .switch:after {
+      content: '';
+      font-size: 1em;
+      position: absolute; }
+    .button_switch .switch:before {
+      border-radius: 1.875rem;
+      background: #666666;
+      width: 8rem;
+      height: 3.5rem;
+      left: -0.35rem;
+      top: -0.3rem;
+      -webkit-transition: background-color 0.25s ease-out 0.1s;
+      -o-transition: background-color 0.25s ease-out 0.1s;
+      transition: background-color 0.25s ease-out 0.1s; }
+    .button_switch .switch:after {
+      -webkit-box-shadow: 0 .0625em .375em 0 #666;
+      box-shadow: 0 .0625em .375em 0 #666;
+      border-radius: 50%;
+      background: #fff;
+      width: 3rem;
+      height: 3rem;
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0);
+      -webkit-transition: -webkit-transform 0.25s ease-out 0.1s;
+      transition: -webkit-transform 0.25s ease-out 0.1s;
+      -o-transition: transform 0.25s ease-out 0.1s;
+      transition: transform 0.25s ease-out 0.1s;
+      transition: transform 0.25s ease-out 0.1s, -webkit-transform 0.25s ease-out 0.1s; }
+    .button_switch .switch:checked:after {
+      -webkit-transform: translate(4.3rem, 0);
+      -ms-transform: translate(4.3rem, 0);
+      transform: translate(4.3rem, 0); }
+    .button_switch .switch:checked ~ .lbl-off {
+      opacity: 0; }
+    .button_switch .switch:checked ~ .lbl-on {
+      opacity: 1; }
+    .button_switch .switch#switch-blue:checked:before {
+      background: #00A3A3; }
+
 .btn_list {
   border: 2px solid yellowgreen;
   border-radius: 1rem;
@@ -8989,8 +9046,6 @@ input::placeholder {
 
 .order_list {
   border: 1px solid #666; }
-  .order_list * {
-    border: 1px solid #666; }
   .order_list .item_group {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9002,7 +9057,8 @@ input::placeholder {
     padding: 1rem; }
   .order_list .item {
     color: #000;
-    width: 100%; }
+    width: 100%;
+    padding: 1rem; }
     .order_list .item ._icon img {
       width: 45px;
       height: 45px; }

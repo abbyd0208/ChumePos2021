@@ -124,6 +124,89 @@
     }
 }
 
+$height: 3.5rem;
+$width: 8rem;
+
+$color-white: #fefefe;
+$color-clouds: #ecf0f1;
+$color-silver: #bdc3c7;
+$color-peter-river: #3498db;
+
+$transition-default: 0.25s ease-out 0.10s;
+
+.button_switch{
+   
+    font-size: 1em;
+    width: 8rem;
+    height: 3.5rem;
+    position: relative;
+    .switch {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        // --
+        height: 0;
+        font-size: 1em;
+        left: 0;
+        line-height: 0;
+        outline: none;
+        position: absolute;
+        top: 0;
+        width: 0;
+    
+        &:before,
+        &:after {
+          content: '';
+          font-size: 1em;
+          position: absolute;
+        }
+    
+        &:before {
+          border-radius: 30 / 16 * 1rem;
+          background: $main-gray;
+          width: 8rem;
+          height: 3.5rem;
+          left: -0.35rem;
+          top: -0.3rem;
+          transition: background-color $transition-default;
+          
+        }
+    
+        &:after {
+          box-shadow: 0 .0625em .375em 0 #666;
+          border-radius: 50%;
+          background: $white;
+          width: 3rem;
+          height: 3rem;
+          transform: translate(0, 0);
+          transition: transform $transition-default;
+         
+        }
+    
+        &:checked {
+          &:after {
+            transform: translate(4.3rem, 0);
+          }
+    
+          & ~ .lbl-off {
+            opacity: 0;
+          }
+    
+          & ~ .lbl-on {
+            opacity: 1;
+          }
+        }
+    
+        &#switch-blue {
+          &:checked:before {
+            background: $primary;
+          }
+        }
+      }
+}
+
+
+
 // 產品列表按鈕
 .btn_list {
     border: 2px solid yellowgreen;
@@ -198,11 +281,6 @@
 // .order_list
 .order_list {
     border: 1px solid #666;
-
-    * {
-        border: 1px solid #666;
-    }
-
     .item_group {
         display: flex;
         align-items: center;
@@ -213,7 +291,7 @@
     .item {
         color: #000;
         width: 100%;
-
+        padding: 1rem;
         ._icon {
             img {
                 width: 45px;
