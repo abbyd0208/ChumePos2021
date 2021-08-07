@@ -30,12 +30,12 @@
 
 // 按鈕 ============
 .btn_block {
-    border: 1px solid green;
+    // border: 1px solid green;
     margin: 1.5rem 0px;
     @include Dflex-alignCenter;
 
     .btn {
-
+        
         // display: inline-block;
         &:not(:nth-of-type(1)) {
             margin-left: 1rem;
@@ -48,7 +48,7 @@
 .btn {
     display: block;
     letter-spacing: 2px;
-
+    background-color:$white;
 
     //ga 0803 測試放大用
     // font-size: inherit !important; //調整為預設
@@ -299,6 +299,7 @@
     position: fixed;
     top: 0;
     left:50%;
+    z-index: 1000;
     transform: translateX(-50%);
     width: 2160px;
     padding: 20px;
@@ -380,6 +381,29 @@
             @include Dflex-alignCenter;
             flex-direction: column;
             justify-content: center;
+        }
+    }
+}
+
+// 訂位卡片
+.table_list{
+    @include flex-spaceBetween;
+    .item{
+        @include flex-spaceBetween;
+        @include border-basic(1px,$light-gray);
+        @include border-basic-radius(1rem);
+        margin-bottom: 1rem;
+        width: 18%;
+        align-items: flex-start;
+        padding: 1rem;
+        .right_box{
+            @include flex-column;
+            ._icon{ margin-right: 0;
+                &:nth-of-type(2){
+                    svg{ color: $main-gray;}
+                }
+                
+            }
         }
     }
 }
