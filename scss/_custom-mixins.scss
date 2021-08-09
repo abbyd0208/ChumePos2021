@@ -52,7 +52,7 @@
   flex-wrap: wrap;
 }
 
-@mixin Dflex-alignCenter {
+@mixin flex-alignCenter {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -135,15 +135,6 @@
 // 圓角
 @mixin border-radius($size) {
   border-radius: $size;
-}
-
-//基本圓角設定：桌機10px, 手機5px
-@mixin border-basic-radius($size) {
-  border-radius: $size;
-
-  @include media-breakpoint-down(md) {
-    border-radius: $size/2;
-  }
 }
 
 //按鈕父層wrap
@@ -276,6 +267,14 @@
   background-color: $bgc;
   border-radius:$border-radius;
 }
+
+
+// Default Font Size
+//
+// This is the default font size as set by Bootstrap V4 in /_reboot.scss
+// $font-size-base: 1rem;
+$font-size-base: 24px;
+
 
 
 @mixin create-heading-type-scale($scale) {

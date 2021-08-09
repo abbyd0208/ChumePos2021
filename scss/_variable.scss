@@ -3,10 +3,6 @@ $primary: #00A3A3!default;  //改回舊色
 $primary-light:#00CCCC!default;
 $secondary: #E1EFEF !default;
 $bg-gray:#F1F4F4!default;//背景色
-// $success: #ffd22c !default;
-// $info: #369bfd !default;
-// $warning: #ffd22c !default;
-// $danger: #fd3635 !default;
 $light: #C4C4C4!default;
 $dark: #0e5557 !default;
 $lighten-blue:#F5FFFF!default; //C2左欄背景色
@@ -44,7 +40,9 @@ $primary-color-5: rgba(0, 204, 204, 0.1) !default;
 // adapting to different screen sizes, for use in media queries.
 
 // Assumes the browser default, typically 1rem = `16px`; 1.2rem ~= 19.2;
-$font-size-base:1.5rem !default;
+// $font-size-base:1.5rem !default;
+$font-size-base:1.2rem !default;
+
 
 $grid-breakpoints: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
