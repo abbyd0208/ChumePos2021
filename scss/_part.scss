@@ -35,6 +35,7 @@
     @include Dflex-alignCenter;
 
     .btn {
+
         // display: inline-block;
         &:not(:nth-of-type(1)) {
             margin-left: 1rem;
@@ -47,8 +48,8 @@
 .btn {
     display: block;
     letter-spacing: 2px;
-    background-color:$white;
-  
+    background-color: $white;
+
     &.bg-primary {
         color: $white;
     }
@@ -129,12 +130,13 @@ $color-peter-river: #3498db;
 
 $transition-default: 0.25s ease-out 0.10s;
 
-.button_switch{
-   
+.button_switch {
+
     font-size: 1em;
     width: 8rem;
     height: 3.5rem;
     position: relative;
+
     .switch {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -148,56 +150,56 @@ $transition-default: 0.25s ease-out 0.10s;
         position: absolute;
         top: 0;
         width: 0;
-    
+
         &:before,
         &:after {
-          content: '';
-          font-size: 1em;
-          position: absolute;
+            content: '';
+            font-size: 1em;
+            position: absolute;
         }
-    
+
         &:before {
-          border-radius: 30 / 16 * 1rem;
-          background: $main-gray;
-          width: 8rem;
-          height: 3.5rem;
-          left: -0.35rem;
-          top: -0.3rem;
-          transition: background-color $transition-default;
-          
+            border-radius: 30 / 16 * 1rem;
+            background: $main-gray;
+            width: 8rem;
+            height: 3.5rem;
+            left: -0.35rem;
+            top: -0.3rem;
+            transition: background-color $transition-default;
+
         }
-    
+
         &:after {
-          box-shadow: 0 .0625em .375em 0 #666;
-          border-radius: 50%;
-          background: $white;
-          width: 3rem;
-          height: 3rem;
-          transform: translate(0, 0);
-          transition: transform $transition-default;
-         
+            box-shadow: 0 .0625em .375em 0 #666;
+            border-radius: 50%;
+            background: $white;
+            width: 3rem;
+            height: 3rem;
+            transform: translate(0, 0);
+            transition: transform $transition-default;
+
         }
-    
+
         &:checked {
-          &:after {
-            transform: translate(4.3rem, 0);
-          }
-    
-          & ~ .lbl-off {
-            opacity: 0;
-          }
-    
-          & ~ .lbl-on {
-            opacity: 1;
-          }
+            &:after {
+                transform: translate(4.3rem, 0);
+            }
+
+            &~.lbl-off {
+                opacity: 0;
+            }
+
+            &~.lbl-on {
+                opacity: 1;
+            }
         }
-    
+
         &#switch-blue {
-          &:checked:before {
-            background: $primary;
-          }
+            &:checked:before {
+                background: $primary;
+            }
         }
-      }
+    }
 }
 
 
@@ -276,6 +278,7 @@ $transition-default: 0.25s ease-out 0.10s;
 // .order_list
 .order_list {
     border: 1px solid #666;
+
     .item_group {
         display: flex;
         align-items: center;
@@ -287,6 +290,7 @@ $transition-default: 0.25s ease-out 0.10s;
         color: #000;
         width: 100%;
         padding: 1rem;
+
         ._icon {
             img {
                 width: 45px;
@@ -297,36 +301,28 @@ $transition-default: 0.25s ease-out 0.10s;
 }
 
 //ga0808
-//按鈕群
-
-.menu_block{
-    a{
+//按鈕群        
+.menu_block {
+    a {
         position: relative;
         height: 120px;
         display: flex;
-        margin: 0 !important;
+        // margin: 0 !important;
         flex-direction: column;
         justify-content: center;
-        span{
-        max-height: 90px;
-        // @include center;
-        // width: calc(100% - 50px);
+
+        span {
+            max-height: 90px;
         }
     }
 }
-.menu_group{
-    a{
-        // position: relative;
-        // height: 120px;
-        // display: flex;
-        // margin: 0 !important;
-        // flex-direction: column;
-        // justify-content: center;
-        span{
-        @extend %text-ellipsis;
-        // max-height: 90px;
-        // @include center;
-        // width: calc(100% - 50px);
+
+//當文字需要兩行的時候父層要加menu_group，a 底下要包 span
+.menu_group {
+    a {
+        span {
+            @extend %text-ellipsis;
+
         }
     }
 
@@ -406,7 +402,7 @@ $transition-default: 0.25s ease-out 0.10s;
     background-color: $white;
     position: fixed;
     top: 0;
-    left:50%;
+    left: 50%;
     z-index: 1000;
     transform: translateX(-50%);
     width: 2160px;
@@ -446,10 +442,11 @@ $transition-default: 0.25s ease-out 0.10s;
     width: max-content;
     // width: 500px;
 
-     >.row, >.row .row{
-         margin-right: 0;
-         margin-left: 0;
-     }
+    >.row,
+    >.row .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
 
     .btn {
         @include border-radius(10px);
@@ -460,12 +457,13 @@ $transition-default: 0.25s ease-out 0.10s;
         margin-bottom: .5rem;
         margin-right: .5rem;
         overflow: hidden;
-        svg{
-           width: 4.5rem;
+
+        svg {
+            width: 4.5rem;
         }
     }
 
-    .result{
+    .result {
         background-color: $white;
         @include border-radius(10px);
         width: 100%;
@@ -475,15 +473,19 @@ $transition-default: 0.25s ease-out 0.10s;
         color: $main-gray;
         font-weight: bold;
     }
-    .numbers{
-        max-width:384px;
+
+    .numbers {
+        max-width: 384px;
     }
-    .controlers{
-        max-width:130px;
-        .btn{
+
+    .controlers {
+        max-width: 130px;
+
+        .btn {
             margin-right: 0;
         }
-        ._enter{
+
+        ._enter {
             height: 376px;
             font-size: 3.5rem;
             @include Dflex-alignCenter;
@@ -494,23 +496,30 @@ $transition-default: 0.25s ease-out 0.10s;
 }
 
 // 訂位卡片
-.table_list{
+.table_list {
     @include flex-spaceBetween;
-    .item{
+
+    .item {
         @include flex-spaceBetween;
-        @include border-basic(1px,$light-gray);
+        @include border-basic(1px, $light-gray);
         @include border-basic-radius(1rem);
         margin-bottom: 1rem;
         width: 18%;
         align-items: flex-start;
         padding: 1rem;
-        .right_box{
+
+        .right_box {
             @include flex-column;
-            ._icon{ margin-right: 0;
-                &:nth-of-type(2){
-                    svg{ color: $main-gray;}
+
+            ._icon {
+                margin-right: 0;
+
+                &:nth-of-type(2) {
+                    svg {
+                        color: $main-gray;
+                    }
                 }
-                
+
             }
         }
     }
@@ -518,44 +527,103 @@ $transition-default: 0.25s ease-out 0.10s;
 
 
 // C.2開始點餐
-.order_block{
+.order_block {
 
-    .slick-prev, .slick-next{
-
-    }
-    .slick-prev{
-        left: 5px;
-    }
-    .slick-next{
-        right: 5px;
-    }
-
-    .btn_block{
+    .sort_list {
         margin: 0 auto 15px;
+
         // max-height: 200px;
-        width: 1383.33px;
+        // width: 1383.33px;
+        .slick-slide {
+            margin: 0 60px;
+            text-align: center;
+        }
 
-        a{
+        .slick-next {
+            right: 15px;
+            background-color: $primary;
+            // -webkit-mask:  url(icon.svg) no-repeat 50% 50%;
+            mask: url(../images/icon_next.svg) no-repeat center / 60%;
+            // background: url(../images/icon_next.svg) no-repeat center / contain;
+        }
 
-            width: 170px;
-            height: 120px;
-            display: flex;
-            margin: 0 !important;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            span{
-            @extend %text-ellipsis;
-            @include center;
-            width: calc(100% - 50px);
+        .slick-prev {
+            left: 15px;
+            background-color: $primary;
+            // background: url(../images/icon_prev.svg) no-repeat center / contain;
+            mask: url(../images/icon_prev.svg) no-repeat center / 60%;
+
+        }
+
+
+        .slick-next,
+        .slick-prev {
+            border: 2px solid cornflowerblue;
+            background-color: $primary;
+            height: 100%;
+            width: 60px;
+            z-index: 5;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        a {
+            max-width: 190px;
+            margin: 5px;
+
+            span {
+                @include center;
+                width: calc(100% - 50px);
             }
         }
     }
-    .right_box{
+
+    .right_box {
         @include Dflex;
-        .col-6{
-            height: calc(100% - 230px);
+
+        .product_panel {
+            width: 100%;
+            height: calc(100% - 305px);
+            overflow: hidden;
+
+            @include Dflex;
+            justify-content: space-between;
+
+            .btn_list{
+                height:100%;
+                  overflow: hidden;
+                  padding: 20px 0 20px 15px;
+
+            }
+
+            .control_list{
+                margin-right: -15px;
+            }
+
+            .product_list{
+                max-height: 1095px;
+                overflow-y: scroll;
+            }
+
         }
+
+            // ga0809調整按鈕間距
+        .menu_group .row{
+            .col-4{
+                padding: 0 7.5px;
+            }
+         & :first-child.col-4{
+             padding-left: 15px;
+         }
+         & :last-child.col-4 {
+            padding-right: 15px;
+
+        }
+        }
+
     }
-   
+
+
 }
