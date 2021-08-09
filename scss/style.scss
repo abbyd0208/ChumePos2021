@@ -10,8 +10,9 @@
 
 // 元件
 @import './part';
+@import './modal';
 
 
 // slick
-@import '../js/slick/slick';
-@import '../js/slick/slick-theme';
+@import '../js/slick/slick.scss';
+@import '../js/slick/slick-theme.scss';
