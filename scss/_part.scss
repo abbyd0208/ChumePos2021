@@ -90,7 +90,7 @@
 ._icon {
     margin-right: 0.5rem;
     display: inline-block;
-
+    font-size: 1.2rem;
     svg {
         @include icon($primary-light, inherit);
     }
@@ -277,24 +277,38 @@ $transition-default: 0.25s ease-out 0.10s;
 
 // .order_list
 .order_list {
-    border: 1px solid #666;
+    // border: 1px solid #666;
 
     .item_group {
         display: flex;
         align-items: center;
         margin-bottom: 30px;
-        padding: 1rem;
+        // padding: 1rem;
+        border-radius: 1rem;
     }
 
     .item {
         color: #000;
         width: 100%;
         padding: 1rem;
+        display: flex;
+        align-items: center;
+        
+        p{ 
+            font-size: 2rem;
+        }
 
+        span{
+            font-size: 2rem;
+        }
         ._icon {
+            margin-right: 1.5rem;
             img {
-                width: 45px;
-                height: 45px;
+                width: 80px;
+                height: 80px;
+            }
+            svg{
+                font-size: 60px;
             }
         }
     }

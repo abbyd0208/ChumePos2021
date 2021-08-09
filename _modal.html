@@ -5,41 +5,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>modal</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script data-search-pseudo-elements defer src="dist/fontawesome-5.15.2/js/all.min.js"></script>
 
 </head>
 
 <body>
     <h2>基礎bootstrap結構</h2>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+        style="background-color: gray;">開啟modal</button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+
+                    <h2 class="modal-title text-center" id="exampleModalLabel">豬肉起司豆腐煲</h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="custom_block" style="background-color: #fff;">
+                        <h4>客製化模組名稱</h4>
+                        <div class="btn_block">
+                            <a class="btn shadow-basic" href="#">選項按鈕</a>
+                            <a class="btn shadow-basic" href="#">選項按鈕</a>
+                            <a class="btn shadow-basic active" href="#">選項按鈕active</a>
+                        </div>
+                        <h4>客製化模組名稱</h4>
+                        <div class="btn_block">
+                            <a class="btn shadow-basic" href="#">選項按鈕+15</a>
+                            <a class="btn shadow-basic" href="#">選項按鈕+15</a>
+                            <a class="btn shadow-basic active" href="#">選項按鈕+15</a>
+                        </div>
+
+                    </div>
+                    <div class="operate mb-5">
+                        <div class="btn_block">
+                            <a class="btn bg-secondary active" href="#"><em class="_icon "><i
+                                        class="fas fa-calculator text-white"></i></em>開啟小鍵盤</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><a class="btn bg-primary btn-lg" href="#">點餐</a> </div>
+                        <div class="col-4"> <a class="btn bg-lighten-gray btn-lg" href="#">加點</a></div>
+                        <div class="col-4"><a class="btn bg-lighten-gray btn-lg" href="#">招待</a></div>
+                    </div>
+                   
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="/js/bootstrap4.2.1/bootstrap.min.js"></script>
+    <!-- 開啟網路接單 -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2"
+        style="background-color: gray;">開啟網路接單</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h2 class="modal-title text-center " id="exampleModalLabel">開啟網路接單</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="order_list">
+                        <div class="item_group">
+                            <div class="item">
+                                <span><em class="_icon"><img src="./images/icon_chume.svg" alt=""></em></span>
+                                <span>CHUME</span>
+                            </div>
+                            <div class="item w-25 justify-content-end">
+                                <div class="button_switch">
+                                    <input type="checkbox" id="switch-blue" class="switch" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_group">
+                            <div class="item">
+                                <span><em class="_icon"><img src="./images/icon_foodpanda.svg" alt=""></em></span>
+                                <span>FoodPanda</span>
+                            </div>
+                            <div class="item w-25 justify-content-end">
+                                <div class="button_switch">
+                                    <input type="checkbox" id="switch-blue" class="switch" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_group">
+                            <div class="item">
+                                <span><em class="_icon"><img src="./images/icon_ubereat.svg" alt=""></em></span>
+                                <span>UberEat</span>
+                            </div>
+                            <div class="item w-25 justify-content-end">
+                                <div class="button_switch">
+                                    <input type="checkbox" id="switch-blue" class="switch" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap4.2.1/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            // 客製化彈窗
+            $('#exampleModal').modal('show');
+            // 開啟網路接單
+            // $('#exampleModal2').modal('show');
+        });
+
+    </script>
 </body>
 
 </html>

@@ -16,6 +16,7 @@ $font-family-sans-serif:'Noto Sans TC','Roboto', sans-serif, Arial, "微軟正�
 // 蓋掉bootstrap應影
 $box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.2);
 
+
 // 自定義變數
 // 灰色
 $main-gray: #666666 !default;
@@ -43,6 +44,8 @@ $primary-color-5: rgba(0, 204, 204, 0.1) !default;
 // $font-size-base:1.5rem !default;
 $font-size-base:1.2rem !default;
 
+
+$modal-xl:80%!default;
 
 $grid-breakpoints: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
