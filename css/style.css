@@ -8826,6 +8826,12 @@ input::placeholder {
   height: 1620px;
   margin: 0 auto; }
 
+.content_customer {
+  border: 1px solid purple;
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto; }
+
 .inner_content {
   padding: 0 15px 15px;
   margin-top: 150px;
