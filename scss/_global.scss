@@ -118,5 +118,6 @@ input::placeholder {
   padding:  0 15px 15px;
   margin-top: 150px;
   @include Dflex;
-  height: -webkit-fill-available; //div填滿高度
+  height: calc(100% - 165px); //扣掉header+paddingbottom 15px
+  border: 1px solid green;
 }

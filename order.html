@@ -26,48 +26,16 @@
         </div>
         <div class="inner_content row">
             <div class="left_box col-4">
-                <div class="menu_block">
-                    <div class="row mb-3">
-                        <div class="col-6"> <a class="btn shadow-basic btn-lg" href="#">
-                            <span><em class="_icon"><i class="fas fa-map-marker-alt"></i></em>外送</span>
-                            </a></div>
-                        <div class="col-6"> <a class="btn shadow-basic btn-lg" href="#">
-                            <span><em class="_icon"><i class="fas fa-map-marker-alt"></i></em>外帶</span></a></div>
-                    </div>
-                   
-                    <div class="menu_group">
-                        <div class="row mb-3">
-                            <div class="col-12"><a class="btn shadow-basic btn-lg" href="#">
-                                    <span>未結帳訂單</span>
-                                </a></div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>即將到來</span></a></div>
-                            <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>網路新訂單</span></a></div>
-                            <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>已接受</span></a></div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>集點</span></a></div>
-                            <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>儲值</span></a></div>
-                            <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>寄杯</span></a></div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>補開發票</span></a>
-                            </div>
-                            <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>發票作廢</span></a>
-                            </div>
-                            <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>發票補印</span></a>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>貸款支出</span></a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="order_detail">
+                <div class="info">
+                    <p>外送</p><p>NHK202011</p>
                 </div>
+                
+            </div>
             </div>
             <div class="right_box col-8">
-                <div class="btn_block main_box col-12" id="sortList">
+                <!-- 菜單分類按鈕 -->
+                <div class="sort_list menu_group menu_block main_box col-12" id="sortList">
                     <a class="btn bg-secondary active" href="#"><span>分類名稱分類名稱分類名稱</span></a>
                     <a class="btn bg-secondary" href="#"><span>主食</span></a>
                     <a class="btn bg-secondary" href="#"><span>分類名稱</span></a>
@@ -87,65 +55,89 @@
                     <a class="btn bg-secondary" href="#"><span>分類名稱</span></a>
                     <a class="btn bg-secondary" href="#"><span>飲料</span></a>
                 </div>
-                <div class="col-6">
-                    <div class="btn_list main_box ">
-                        <a class="btn btn-md bg-secondary btn-block active" href="#">
-                            <span>產品名稱 </span>
-                            <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
-                        </a>
-
-                        <a class="btn btn-md bg-secondary btn-block" href="#">
-                            <span>產品名稱 </span>
-                            <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
-                        </a>
-
-                        <a class="btn btn-md bg-secondary btn-block" href="#">
-                            <span>產品名稱 </span>
-                            <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="menu_block">
-                        <div class="row mb-3">
-                            <div class="col-6"> <a class="btn shadow-basic btn-lg" href="#">
-                                <span><em class="_icon"><i class="fas fa-map-marker-alt"></i></em>外送</span>
-                                </a></div>
-                            <div class="col-6"> <a class="btn shadow-basic btn-lg" href="#">
-                                <span><em class="_icon"><i class="fas fa-map-marker-alt"></i></em>外帶</span></a></div>
+                <!-- 產品選單及主控區 -->
+                <div class="product_panel">
+                    <div class="btn_list col-6">
+                        <div class="product_list">
+                            <a class="btn btn-md bg-secondary btn-block active" href="#">
+                                <span>產品名稱 </span>
+                                <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
+                            </a>
+    
+                            <a class="btn btn-md bg-secondary btn-block" href="#">
+                                <span>產品名稱 </span>
+                                <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
+                            </a>
+    
+                            <a class="btn btn-md bg-secondary btn-block" href="#">
+                                <span>產品名稱 </span>
+                                <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
+                            </a>
                         </div>
-                       
-                        <div class="menu_group">
+                    </div>
+                    <div class="control_list col-6">
+                        <div class="menu_block">
                             <div class="row mb-3">
-                                <div class="col-12"><a class="btn shadow-basic btn-lg" href="#">
-                                        <span>未結帳訂單</span>
+                                <div class="col-6"> <a class="btn shadow-basic btn-lg" href="#">
+                                    <span><em class="_icon"><i class="fas fa-map-marker-alt"></i></em>外送</span>
                                     </a></div>
+                                <div class="col-6"> <a class="btn shadow-basic btn-lg" href="#">
+                                    <span><em class="_icon"><i class="fas fa-map-marker-alt"></i></em>外帶</span></a></div>
+                            </div>
+                           
+                            <div class="menu_group">                    
+                                <div class="row mb-3">
+                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>送單</span></a></div>
+                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>暫存</span></a></div>
+                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>取消</span></a></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>折扣</span></a></div>
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>服務費</span></a></div>
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>現金儲值</span></a></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>禮券兌換</span></a>
+                                    </div>
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>點數兌換</span></a>
+                                    </div>
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>儲值兌換</span></a>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>寄杯兌換</span></a>
+                                    </div>
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>轉桌</span></a>
+                                    </div>
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>併帳</span></a>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>統一編號</span></a>
+                                    </div>
+                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>現金結帳</span></a>
+                                    </div>
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>退單</span></a>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>Google Pay</span></a>
+                                    </div>
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>Apple Pay</span></a>
+                                    </div>
+                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>Line Pay</span></a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>即將到來</span></a></div>
-                                <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>網路新訂單</span></a></div>
-                                <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>已接受</span></a></div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>集點</span></a></div>
-                                <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>儲值</span></a></div>
-                                <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>寄杯</span></a></div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>補開發票</span></a>
-                                </div>
-                                <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>發票作廢</span></a>
-                                </div>
-                                <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>發票補印</span></a>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>貸款支出</span></a>
-                                </div>
+                                <div class="col-12"><a class="btn btn-lg bg-lighten-gray text-white" href="#">
+                                    <span>呼叫外送</span>
+                                </a></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
 
             </div>
         </div>
@@ -158,12 +150,13 @@
 
     function sortList() {
         var shopOptions = {
-            // slidesToShow: 1,
-            // slidesToScroll: 1,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             autoplay: false,
             dots: false,
-            slidesPerRow: 7,
+            slidesPerRow: 6,
             rows: 2,
+            // variableWidth:true,
             // arrows: false,
         }
         $('#sortList').slick(shopOptions);
