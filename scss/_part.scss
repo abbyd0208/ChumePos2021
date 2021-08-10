@@ -433,46 +433,6 @@ $transition-default: 0.25s ease-out 0.10s;
 }
 
 
-//header
-
-.header {
-    @include flex-alignCenter;
-    color: $main-gray;
-    background-color: $white;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    z-index: 1000;
-    transform: translateX(-50%);
-    width: 2160px;
-    padding: 20px;
-    border-radius: 0 0 10px 10px;
-    margin-bottom: 30px;
-    // background-color: $white;
-
-    .info {
-        @include flex-alignCenter;
-
-        * {
-            margin-bottom: 0;
-        }
-
-    }
-
-    ._icon {
-        font-size: 1.8rem;
-    }
-
-    ._account {
-        color: $main-gray;
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-        margin-left: auto;
-        // font-size:1.2rem;
-    }
-}
-
 
 //小鍵盤
 .numpad {

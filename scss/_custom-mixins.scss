@@ -38,6 +38,12 @@
     @content;
   }
 }
+@mixin secondary-device($width,$height){
+  @media screen and (max-width:$width) and (max-height:$height)  {
+    @content;
+  }
+}
+
 
 @mixin media-btween($max,$min){
   @media screen and (max-width:$max) and (min-width:$min) {

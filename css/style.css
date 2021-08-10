@@ -11772,6 +11772,62 @@ input::placeholder {
   appearance: none;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #666666;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 1000;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 2160px;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 30px;
+}
+.header .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.header .info * {
+  margin-bottom: 0;
+}
+.header ._icon {
+  font-size: 1.8rem;
+}
+.header ._account {
+  color: #666666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  margin-left: auto;
+}
+@media screen and (max-width: 1920px) and (max-height: 1200px) {
+  .header {
+    background-color: red;
+    width: 1920px;
+  }
+}
+
 .main_box {
   background-color: #fff;
   padding: 15px;
@@ -11792,8 +11848,8 @@ input::placeholder {
 .content {
   border: 10px solid hotpink;
   background-color: #F1F4F4;
-  width: 2160px;
-  height: 1620px;
+  width: 1920px;
+  height: 1200px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -12215,56 +12271,6 @@ input::placeholder {
 .card_list ._iconBg svg {
   color: #fff;
   font-size: 1.6rem;
-}
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  color: #666666;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  z-index: 1000;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 2160px;
-  padding: 20px;
-  border-radius: 0 0 10px 10px;
-  margin-bottom: 30px;
-}
-.header .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.header .info * {
-  margin-bottom: 0;
-}
-.header ._icon {
-  font-size: 1.8rem;
-}
-.header ._account {
-  color: #666666;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: bold;
-  margin-left: auto;
 }
 
 .numpad {
