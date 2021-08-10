@@ -41,10 +41,10 @@
 }
 
 .btn {
-  display: block;
-  letter-spacing: 2px;
-  background-color: $white;
-  padding: 15px;
+    display: block;
+    letter-spacing: 2px;
+    background-color: $white;
+    padding: 15px;
 
   &.bg-primary {
     color: $white;
@@ -91,7 +91,13 @@
 
   img {
     display: inline-block;
+    font-size: 1.2rem;
+
+    svg {
+        @include icon($primary-light, inherit);
+    }
   }
+    
 }
 
 ._iconl {
@@ -312,6 +318,7 @@ $transition-default: 0.25s ease-out 0.1s;
 .menu_block {
     // height: calc(100% - 130px);
     padding: 8px;
+
     a {
         position: relative;
         height: 110px;
@@ -359,8 +366,9 @@ $transition-default: 0.25s ease-out 0.1s;
 
 .card_list {
     @include btn-wrap(1rem, 20px, 0px);
-    a{
-        background-color:$secondary !important;
+
+    a {
+        background-color: $secondary !important;
     }
 
     .card_title,
@@ -508,8 +516,8 @@ $transition-default: 0.25s ease-out 0.1s;
 
 // C.2開始點餐
 .order_block {
-    .left_box{
-        border-radius:0 0  1rem 1rem ;       
+    .left_box {
+        border-radius: 0 0 1rem 1rem;
         background-color: $lighten-blue;
         height: 100%;
     }
@@ -523,31 +531,33 @@ $transition-default: 0.25s ease-out 0.1s;
         // background-color: $secondary;
         box-shadow: none;
         @include border-radius(1rem);
-          
+
         >div {
             @include flex-spaceBetween;
-            border-bottom: 15px solid $bg-gray; 
+            border-bottom: 15px solid $bg-gray;
             padding: 15px;
             margin-left: -15px;
             margin-right: -15px;
-            p{
+
+            p {
                 @include flex-alignCenter;
             }
 
-            &.info{
-                border-radius: 1rem 1rem 0 0 ;
+            &.info {
+                border-radius: 1rem 1rem 0 0;
                 color: $dark;
             }
 
-            &.subtotal{
+            &.subtotal {
                 color: $main-gray;
-                span{
+
+                span {
                     margin-left: 15px;
                     margin-right: 15px;
                     vertical-align: middle;
                 }
 
-                p:nth-last-of-type(1) span{
+                p:nth-last-of-type(1) span {
                     margin-right: 0;
                 }
             }
@@ -555,13 +565,12 @@ $transition-default: 0.25s ease-out 0.1s;
     }
 
     //左邊已點內容
-    .card_list{
-        // 100%-header150 -order-detail 205
-        // height: calc(100% - 355px);
+    .card_list {
+        height: 1250px;
         overflow-y: scroll;
 
-        @include secondary-device{
-        // height:1000px;
+        @include secondary-device {
+            // height:1000px;
         }
     }
 
@@ -585,14 +594,14 @@ $transition-default: 0.25s ease-out 0.1s;
 
 
         .product_list {
-            .btn{
+            .btn {
                 padding: 20px 8px 20px 20px;
             }
 
-            a span{
+            a span {
                 max-width: calc(100% - 75px);
                 @extend %text-ellipsis;
-                  -webkit-line-clamp: 1;
+                -webkit-line-clamp: 1;
 
             }
         }
@@ -604,8 +613,8 @@ $transition-default: 0.25s ease-out 0.1s;
             overflow-y: scroll;
         }
 
-        .menu_block{
-        //    height: calc(100% - 130px);
+        .menu_block {
+            //    height: calc(100% - 130px);
         }
 
     }
@@ -613,7 +622,7 @@ $transition-default: 0.25s ease-out 0.1s;
     //分類樣式
     .sort_list {
         margin: 0 auto 1rem;
-        // padding-bottom: 0;
+        height: 270px;
 
         .slick-slide {
             margin: 0 60px;
@@ -636,7 +645,6 @@ $transition-default: 0.25s ease-out 0.1s;
 
         }
 
-
         .slick-next,
         .slick-prev {
             border: 2px solid cornflowerblue;
@@ -651,7 +659,8 @@ $transition-default: 0.25s ease-out 0.1s;
         }
 
         a {
-            max-width: 190px;
+            // max-width: 190px;
+            width: calc(16.6667% -10px);
             margin: 5px;
 
             span {
@@ -663,41 +672,25 @@ $transition-default: 0.25s ease-out 0.1s;
     }
 
     // 第二種螢幕1920寬樣式
-    @include secondary-device{
+    @include secondary-device {
         .left_box{
-        height:1030px;
+            overflow:hidden;
+            // height: 100%;
         }
-
-        .right_box{
-            // padding-right: 0;
+        .card_list {
+            overflow-y: scroll;
+            height: 1210px;
         }
-
+       .product_panel {
+           height: 1140px;
+           .btn_list {
+            height: 100%;
+        }
+        .control_list{
+            height: 1140px;
+        }
+       }
         
-
-        .card_list{
-            // height: calc(100% - 215px);
-        }
-
-
-        .sort_list{
-            height: 270px;
-            a{
-               max-width: 170px;
-            }
-        }
-
-        .product_panel{
-            
-            // height: 745px;
-            .product_list{
-                // max-height: calc(100% - 15px);
-            }
-            .btn_list{
-                padding: 20px 15px 0 15px;
-            }
-
-        }
-
-        }
+    }
 
 }
