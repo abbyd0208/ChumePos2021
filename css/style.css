@@ -12442,6 +12442,7 @@ input::placeholder {
   margin-right: 0;
 }
 .order_block .card_list {
+  height: 1250px;
   overflow-y: scroll;
 }
 .order_block .product_panel {
@@ -12477,6 +12478,7 @@ input::placeholder {
 }
 .order_block .sort_list {
   margin: 0 auto 1rem;
+  height: 270px;
 }
 .order_block .sort_list .slick-slide {
   margin: 0 60px;
@@ -12506,7 +12508,7 @@ input::placeholder {
   display: none;
 }
 .order_block .sort_list a {
-  max-width: 190px;
+  width: calc(16.6667% -10px);
   margin: 5px;
 }
 .order_block .sort_list a span {
@@ -12519,16 +12521,20 @@ input::placeholder {
 }
 @media screen and (max-width: 1920px) and (max-height: 1200px) {
   .order_block .left_box {
-    height: 1030px;
+    overflow: hidden;
   }
-  .order_block .sort_list {
-    height: 270px;
+  .order_block .card_list {
+    overflow-y: scroll;
+    height: 1210px;
   }
-  .order_block .sort_list a {
-    max-width: 170px;
+  .order_block .product_panel {
+    height: 1140px;
   }
   .order_block .product_panel .btn_list {
-    padding: 20px 15px 0 15px;
+    height: 100%;
+  }
+  .order_block .product_panel .control_list {
+    height: 1140px;
   }
 }
 
