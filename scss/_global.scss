@@ -5,8 +5,10 @@
 // // font-family: 'Roboto', sans-serif;
 
 html{
-//  font-size:150%;  //font-basic 24px
 font-size: $font-size-base;
+@include secondary-device{
+  font-size: $font-size-base-2 ;
+}
 }
 
 * {
@@ -18,6 +20,7 @@ font-size: $font-size-base;
 }
 
 body {
+
   font-family:'Roboto', 'Noto Sans TC',  $font-family-sans-serif;
   // overflow-x: hidden;
   line-height: 1.8;
@@ -81,6 +84,55 @@ input::placeholder {
   appearance: none;
 }
 
+
+
+
+//header ============
+
+.header {
+  @include flex-alignCenter;
+  color: $main-gray;
+  background-color: $white;
+  // position: fixed;
+  // top: 0;
+  // left: 50%;
+  // z-index: 1000;
+  // transform: translateX(-50%);
+  // width: 2160px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  // margin-bottom: 30px;
+  // background-color: $white;
+
+  .info {
+      @include flex-alignCenter;
+
+      * {
+          margin-bottom: 0;
+      }
+
+  }
+
+  ._icon {
+      font-size: 1.8rem;
+  }
+
+  ._account {
+      color: $main-gray;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      margin-left: auto;
+      // font-size:1.2rem;
+  }
+
+  @include secondary-device{
+    background-color: red ;
+  }
+
+}
+
 // div ============
 
 .main_box {
@@ -108,10 +160,14 @@ input::placeholder {
 
 
 .content{
-  border: 10px solid hotpink;
+  border: 1px solid hotpink;
   background-color: $bg-gray;
   width:2160px;
   height: 1620px;
+
+  // width: 1920px;
+  // height: 1200px;
+
   margin: 0 auto;
   overflow: hidden;
 }
@@ -124,9 +180,10 @@ input::placeholder {
 }
 
 .inner_content{
-  padding:  0 15px 15px;
-  margin-top: 150px;
+  padding:  30px 15px 15px;
+  // margin-top: 150px;
   @include Dflex;
-  height: calc(100% - 165px); //扣掉header+paddingbottom 15px
-  border: 5px solid cornflowerblue;
+  height: calc(100% - 130px); //扣掉header高度
+  border: 1px solid cornflowerblue;
+  
 }
