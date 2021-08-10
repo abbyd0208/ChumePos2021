@@ -166,7 +166,7 @@ $transition-default: 0.25s ease-out 0.10s;
             width: 8rem;
             height: 3.5rem;
             left: -0.35rem;
-            top: -0.3rem;
+            // top: -0.3rem; 2021-08
             transition: background-color $transition-default;
 
         }
@@ -177,6 +177,8 @@ $transition-default: 0.25s ease-out 0.10s;
             background: $white;
             width: 3rem;
             height: 3rem;
+            // 2021-08
+            top:0.25rem;
             transform: translate(0, 0);
             transition: transform $transition-default;
 
@@ -285,21 +287,19 @@ $transition-default: 0.25s ease-out 0.10s;
         margin-bottom: 30px;
         // padding: 1rem;
         border-radius: 1rem;
+        background-color: #ffffff;
     }
 
     .item {
         color: #000;
-        width: 100%;
         padding: 1rem;
-        display: flex;
-        align-items: center;
-        
+
         p{ 
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         span{
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         ._icon {
             margin-right: 1.5rem;
@@ -310,6 +310,10 @@ $transition-default: 0.25s ease-out 0.10s;
             svg{
                 font-size: 60px;
             }
+        }
+        //最左邊的item 2021-08
+        ._line {
+            border-right: 1px solid $light-gray;
         }
     }
 }
