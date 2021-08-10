@@ -285,10 +285,11 @@ $transition-default: 0.25s ease-out 0.10s;
         margin-bottom: 30px;
         // padding: 1rem;
         border-radius: 1rem;
+        background-color: $white;
     }
 
     .item {
-        color: #000;
+        color: $black;
         width: 100%;
         padding: 1rem;
         display: flex;
@@ -367,13 +368,8 @@ $transition-default: 0.25s ease-out 0.10s;
 
 .card_list {
     @include btn-wrap(1rem, 20px, 0px);
-
     a{
         background-color:$secondary !important;
-    }
-
-    a+a {
-        // margin-bottom: .5rem
     }
 
     .card_title,
@@ -527,7 +523,16 @@ $transition-default: 0.25s ease-out 0.10s;
 
 // C.2開始點餐
 .order_block {
+    .left_box{
+        border-radius:0 0  1rem 1rem ;       
+        background-color: $lighten-blue;
+    }
 
+    .right_box {
+        @include Dflex;
+    }
+
+    //左邊訂單資訊
     .order_detail {
         // background-color: $secondary;
         box-shadow: none;
@@ -563,61 +568,72 @@ $transition-default: 0.25s ease-out 0.10s;
         }
     }
 
-    .left_box{
-        border-radius:0 0  1rem 1rem ;       
-        background-color: $lighten-blue;
+    //左邊已點內容
+    .card_list{
+        // 100%-header150 -order-detail 205
+        height: calc(100% - 355px);
+        overflow-y: scroll;
+
+        @include secondary-device{
+        // height:1000px;
+        }
     }
-    .right_box {
+
+    .product_panel {
+        width: 100%;
+        height: calc(100% - 290px);
+        // overflow: hidden;
+
         @include Dflex;
+        justify-content: space-between;
 
-        .product_panel {
-            width: 100%;
-            height: calc(100% - 290px);
-            // overflow: hidden;
-
-            @include Dflex;
-            justify-content: space-between;
-
-            .btn_list {
-                // height:100%;
-                max-height: 100%;
-                overflow: hidden;
-                padding: 20px 0 0 15px;
-                position: relative;
-
-            }
-
-            .control_list {
-                margin-right: -15px;
-            }
-
-            .product_list {
-                max-height: 1095px;
-                overflow-y: scroll;
-                .btn{
-                    padding: 20px 8px 20px 20px;
-                }
-
-                a span{
-                    max-width: calc(100% - 75px);
-                    @extend %text-ellipsis;
-                      -webkit-line-clamp: 1;
-
-                }
-            }
+        .btn_list {
+            // height:100%;
+            max-height: 100%;
+            overflow: hidden;
+            padding: 20px 15px 0 15px;
+            position: relative;
 
         }
 
+        .control_list {
+            margin-right: -15px;
+            margin-top: -10px;
+        overflow-x: hidden;
+
+        }
+
+        .product_list {
+            max-height: 1095px;
+            overflow-y: scroll;
+            .btn{
+                padding: 20px 8px 20px 20px;
+            }
+
+            a span{
+                max-width: calc(100% - 75px);
+                @extend %text-ellipsis;
+                  -webkit-line-clamp: 1;
+
+            }
+        }
+
+        .menu_block{
+        max-height:1000px ;
+        // overflow-y: auto;
+        padding: 10px;
+        }
 
     }
 
     //分類樣式
     .sort_list {
         margin: 0 auto 1rem;
+        padding-bottom: 0;
 
         .slick-slide {
             margin: 0 60px;
-            text-align: center;
+            // text-align: center;
         }
 
         .slick-next {
@@ -661,5 +677,45 @@ $transition-default: 0.25s ease-out 0.10s;
             }
         }
     }
+
+    // 第二種螢幕1920寬樣式
+    @include secondary-device{
+        .left_box{
+        height:1030px;
+        }
+
+        .right_box{
+            // padding-right: 0;
+        }
+
+        
+
+        .card_list{
+            height: calc(100% - 215px);
+        }
+
+
+        .sort_list{
+            height: 270px;
+            a{
+               max-width: 170px;
+            }
+        }
+
+        .product_panel{
+            height: 745px;
+            .product_list{
+                max-height: calc(100% - 15px);
+            }
+            .btn_list{
+                padding: 20px 15px 0 15px;
+            }
+
+            .menu_block{
+                max-height: 710px;
+            }
+        }
+
+        }
 
 }

@@ -38,12 +38,18 @@
     @content;
   }
 }
-@mixin secondary-device($width,$height){
-  @media screen and (max-width:$width) and (max-height:$height)  {
+// @mixin secondary-device($width,$height){
+//   @media screen and (max-width:$width) and (max-height:$height)  {
+//     @content;
+//   }
+// }
+
+
+@mixin secondary-device{
+  @media screen and (max-width:1920px) and (max-height:1200px)  {
     @content;
   }
 }
-
 
 @mixin media-btween($max,$min){
   @media screen and (max-width:$max) and (min-width:$min) {

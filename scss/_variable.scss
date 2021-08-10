@@ -6,6 +6,8 @@ $bg-gray:#F1F4F4!default;//背景色
 $light: #C4C4C4!default;
 $dark: #0e5557 !default;
 $lighten-blue:#F5FFFF!default; //C2左欄背景色
+// $black:#000!default; 
+// $white:#FFF!default; 
 
 $primary-color: #00A3A3 !important;
 $secondary-color: #E1EFEF !important;
@@ -43,6 +45,7 @@ $primary-color-5: rgba(0, 204, 204, 0.1) !default;
 // Assumes the browser default, typically 1rem = `16px`; 1.2rem ~= 19.2;
 // $font-size-base:1.5rem !default;
 $font-size-base:1.2rem !default;
+$font-size-base-2:1.15rem!default;
 
 
 $modal-xl:80%!default;
