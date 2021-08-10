@@ -93,16 +93,16 @@ input::placeholder {
   @include flex-alignCenter;
   color: $main-gray;
   background-color: $white;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  z-index: 1000;
-  transform: translateX(-50%);
+  // position: fixed;
+  // top: 0;
+  // left: 50%;
+  // z-index: 1000;
+  // transform: translateX(-50%);
   // width: 2160px;
   width: 100%;
   padding: 20px;
   border-radius: 0 0 10px 10px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   // background-color: $white;
 
   .info {
@@ -180,10 +180,10 @@ input::placeholder {
 }
 
 .inner_content{
-  padding:  0 15px 15px;
-  margin-top: 150px;
+  padding:  30px 15px 15px;
+  // margin-top: 150px;
   @include Dflex;
-  height: calc(100% - 165px); //扣掉header+paddingbottom 15px
+  height: calc(100% - 130px); //扣掉header高度
   border: 1px solid cornflowerblue;
   
 }

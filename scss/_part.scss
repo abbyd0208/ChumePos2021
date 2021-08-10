@@ -318,6 +318,8 @@ $transition-default: 0.25s ease-out 0.10s;
 //ga0808
 //按鈕群        
 .menu_block {
+    // height: calc(100% - 130px);
+    padding: 8px;
     a {
         position: relative;
         height: 110px;
@@ -526,10 +528,11 @@ $transition-default: 0.25s ease-out 0.10s;
     .left_box{
         border-radius:0 0  1rem 1rem ;       
         background-color: $lighten-blue;
+        height: 100%;
     }
 
     .right_box {
-        @include Dflex;
+        // @include Dflex;
     }
 
     //左邊訂單資訊
@@ -571,7 +574,7 @@ $transition-default: 0.25s ease-out 0.10s;
     //左邊已點內容
     .card_list{
         // 100%-header150 -order-detail 205
-        height: calc(100% - 355px);
+        // height: calc(100% - 355px);
         overflow-y: scroll;
 
         @include secondary-device{
@@ -581,31 +584,24 @@ $transition-default: 0.25s ease-out 0.10s;
 
     .product_panel {
         width: 100%;
-        height: calc(100% - 290px);
+        height: calc(100% - 295px); // 100% - sort270 - 25(待查)
         // overflow: hidden;
 
         @include Dflex;
         justify-content: space-between;
 
         .btn_list {
-            // height:100%;
-            max-height: 100%;
+            // height: calc(100% - 150px); // 100% - header 130px
+            height: 1160px;
             overflow: hidden;
-            padding: 20px 15px 0 15px;
+            overflow-y: scroll;
+            padding: 20px 15px;
             position: relative;
 
         }
 
-        .control_list {
-            margin-right: -15px;
-            margin-top: -10px;
-        overflow-x: hidden;
-
-        }
 
         .product_list {
-            max-height: 1095px;
-            overflow-y: scroll;
             .btn{
                 padding: 20px 8px 20px 20px;
             }
@@ -618,10 +614,15 @@ $transition-default: 0.25s ease-out 0.10s;
             }
         }
 
+        .control_list {
+            // height: calc(100% - 130px);
+            height: 1160px;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
         .menu_block{
-        max-height:1000px ;
-        // overflow-y: auto;
-        padding: 10px;
+        //    height: calc(100% - 130px);
         }
 
     }
@@ -629,7 +630,7 @@ $transition-default: 0.25s ease-out 0.10s;
     //分類樣式
     .sort_list {
         margin: 0 auto 1rem;
-        padding-bottom: 0;
+        // padding-bottom: 0;
 
         .slick-slide {
             margin: 0 60px;
@@ -691,7 +692,7 @@ $transition-default: 0.25s ease-out 0.10s;
         
 
         .card_list{
-            height: calc(100% - 215px);
+            // height: calc(100% - 215px);
         }
 
 
@@ -703,17 +704,15 @@ $transition-default: 0.25s ease-out 0.10s;
         }
 
         .product_panel{
-            height: 745px;
+            
+            // height: 745px;
             .product_list{
-                max-height: calc(100% - 15px);
+                // max-height: calc(100% - 15px);
             }
             .btn_list{
                 padding: 20px 15px 0 15px;
             }
 
-            .menu_block{
-                max-height: 710px;
-            }
         }
 
         }
