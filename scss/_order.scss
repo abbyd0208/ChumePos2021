@@ -1,0 +1,188 @@
+// C.2開始點餐
+.order_block {
+    .left_box {
+      border-radius: 0 0 1rem 1rem;
+      background-color: $lighten-blue;
+      height: 100%;
+    }
+  
+    .right_box {
+      height: 100%;
+    }
+  
+    //左邊訂單資訊
+    .order_detail {
+      // background-color: $secondary;
+      box-shadow: none;
+      @include border-radius(1rem);
+  
+      >div {
+        @include flex-spaceBetween;
+        border-bottom: 15px solid $bg-gray;
+        padding: 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+  
+        p {
+          @include flex-alignCenter;
+        }
+  
+        &.info {
+          border-radius: 1rem 1rem 0 0;
+          color: $dark;
+        }
+  
+        &.subtotal {
+          color: $main-gray;
+  
+          span {
+            margin-left: 15px;
+            margin-right: 15px;
+            vertical-align: middle;
+          }
+  
+          p:nth-last-of-type(1) span {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  
+  
+  
+    //左邊已點內容
+    .card_list {
+      height: calc(100% - 178px);
+      overflow-y: scroll;
+  
+      @include secondary-device {
+        // height:1000px;
+      }
+    }
+  
+    //分類樣式 高度276(marginbottom20)
+    .sort_list {
+      margin: 0 auto 20px;
+      height: 256px;
+      padding-left: 0;
+      padding-right: 0;
+  
+  
+      .slick-slide {
+        margin: 0 60px;
+  
+        // text-align: center;
+        >div {
+          display: flex;
+        }
+      }
+  
+      .slick-next {
+        right: 0px;
+        background-color: $primary;
+        mask: url(../images/icon_next.svg) no-repeat center / 60%;
+      }
+  
+      .slick-prev {
+        left: 0px;
+        background-color: $primary;
+        mask: url(../images/icon_prev.svg) no-repeat center / 60%;
+  
+      }
+  
+      .slick-next,
+      .slick-prev {
+        background-color: $primary;
+        height: 100%;
+        width: 60px;
+        z-index: 5;
+  
+        &::before {
+          display: none;
+        }
+      }
+  
+      .slick-arrow.slick-disabled {
+        background-color: $light-gray;
+  
+      }
+  
+      a {
+        // max-width: 190px;
+        width: calc(16.6667% -10px);
+        margin: 5px;
+  
+        span {
+          @extend %text-ellipsis;
+          @include center;
+          width: calc(100% - 50px);
+        }
+      }
+    }
+  
+  
+    //產品及按鈕區
+    .product_panel {
+      width: 100%;
+      height: calc(100% - 276px); //扣掉sortlist高
+      padding: 8px;
+      overflow: hidden;
+  
+      @include Dflex;
+      justify-content: space-between;
+  
+
+      //產品列表
+      .product_list {
+
+        overflow: hidden;
+        overflow-y: scroll;
+        padding: 20px 15px;
+        position: relative;
+        height: 100%;
+
+        .btn {
+          padding: 20px 8px 20px 20px;
+        }
+  
+        a span {
+          max-width: calc(100% - 75px);
+          @extend %text-ellipsis;
+          -webkit-line-clamp: 1;
+  
+        }
+      }
+  
+      //按鈕區
+      .control_list {
+        height: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+        margin-top: -8px;
+      }
+
+
+
+    //   C.5網路訂單不接單
+      .interetControl_list{
+        height: 100%;
+
+        //不接單列表
+        .reason_list{
+            padding: 20px 15px;
+              height: calc(100% - 110px);
+              overflow: hidden;
+              overflow-y: scroll;
+
+       }
+       }
+  
+    }
+  
+    // 第二種螢幕1920寬樣式
+    @include secondary-device {
+      .sort_list a span {
+        width: calc(100% - 30px);
+      }
+    }
+  }

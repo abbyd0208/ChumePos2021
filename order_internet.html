@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C.2未結帳/開始點餐</title>
+    <title>C.5.3網路訂單不接單</title>
     <script data-search-pseudo-elements defer src="dist/fontawesome-5.15.2/js/all.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" media="print" href="css/print.min.css">
@@ -132,76 +132,43 @@
                 <!-- 產品選單及按鈕區 -->
                 <div class="product_panel">
                     <!-- 產品選單 -->
-                    <div class="btn_list main_box col-6">
-                        <div class="product_list">
-                            <a class="btn bg-secondary btn-block active" href="#">
-                                <span>產品名稱 </span>
-                                <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
-                            </a>
-    
-                            <a class="btn  bg-secondary btn-block" href="#">
-                                <span>產品名稱 </span>
-                                <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
-                            </a>
-    
-                            <a class="btn  bg-secondary btn-block" href="#">
-                                <span>產品名稱 </span>
-                                <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
-                            </a>
-                        </div>
-                    </div>
+                    <div class="product_list btn_list main_box col-6">
+                        <a class="btn bg-secondary btn-block active" href="#">
+                            <span>產品名稱 </span>
+                            <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
+                        </a>
+
+                        <a class="btn  bg-secondary btn-block" href="#">
+                            <span>產品名稱 </span>
+                            <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
+                        </a>
+
+                        <a class="btn  bg-secondary btn-block" href="#">
+                            <span>產品名稱 </span>
+                            <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
+                        </a>
+                </div>
                     <!-- 按鈕區 -->
-                    <div class="control_list col-6">
+                    <div class="interetControl_list col-6">
                         <div class="menu_block">
-                            <div class="menu_group">                    
-                                <div class="row mb-2">
-                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>送單</span></a></div>
-                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>暫存</span></a></div>
-                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>取消</span></a></div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>折扣</span></a></div>
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>服務費</span></a></div>
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>現金儲值</span></a></div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>禮券兌換</span></a>
-                                    </div>
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>點數兌換</span></a>
-                                    </div>
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>儲值兌換</span></a>
-                                    </div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>寄杯兌換</span></a>
-                                    </div>
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>轉桌</span></a>
-                                    </div>
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>併帳</span></a>
-                                    </div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>統一編號</span></a>
-                                    </div>
-                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>現金結帳</span></a>
-                                    </div>
-                                    <div class="col-4"> <a class="btn btn-lg bg-lighten-gray text-white" href="#"><span>退單</span></a>
-                                    </div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>Google Pay</span></a>
-                                    </div>
-                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>Apple Pay</span></a>
-                                    </div>
-                                    <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>Line Pay</span></a>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="row mb-2">
-                                <div class="col-12"><a class="btn btn-lg bg-lighten-gray text-white" href="#">
-                                    <span>呼叫外送</span>
-                                </a></div>
+                                <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>接單<br>回首頁</span></a></div>
+                                <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>呼叫外送</span></a></div>
+                                <div class="col-4"> <a class="btn shadow-basic btn-lg" href="#"><span>重新列印</span></a></div>
                             </div>
+                        </div>
+                        <div class="reason_list btn_list main_box">
+                            <a class="btn bg-secondary btn-block active" href="#">
+                                <span>理由1</span>
+                            </a>
+    
+                            <a class="btn  bg-secondary btn-block" href="#">
+                                <span>理由2</span>
+                            </a>
+    
+                            <a class="btn  bg-secondary btn-block" href="#">
+                                <span>理由3</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -228,16 +195,6 @@
         }
         $('#sortList').slick(shopOptions);
     }
-
-
-    var winH = $(window).height();
-    var headerH = $(".header").outerHeight();
-    var inner_contentH = $(".inner_content").outerHeight();
-    var sort_listH = $(".sort_list").outerHeight();
-    var newH = inner_contentH - sort_listH - 45 -30;   //45是innercontent paddingtop30 paddingbtm15  //40待查
-   
-    //panel子層高度
-    $(".btn_list, .control_list").css("height",newH);
 
 </script>
 
