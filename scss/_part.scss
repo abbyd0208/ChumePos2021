@@ -355,8 +355,9 @@ $transition-default: 0.25s ease-out 0.1s;
 
 // .invoice_list
 .invoice_list{
-    *{ border: 1px solid red;}
-    li{ @include flex-spaceBetween; align-items: flex-start; border-bottom: 1px dotted $light-gray; padding-bottom: .5rem; margin-bottom: .5rem;}
+    // *{ border: 1px solid red;}
+    li{ @include flex-spaceBetween; align-items: flex-start; border-bottom: 1px dotted $light-gray; padding-bottom: .5rem; margin-bottom: .5rem;
+    color: $main-gray;}
 
 }
 
