@@ -6,9 +6,9 @@
 
 html{
 font-size: $font-size-base;
-@include secondary-device{
-  font-size: $font-size-base-2 ;
-}
+// @include secondary-device{
+//   font-size: $font-size-base-2 ;
+// }
 }
 
 * {
@@ -162,11 +162,15 @@ input::placeholder {
 .content{
   border: 1px solid hotpink;
   background-color: $bg-gray;
-  width:2160px;
-  height: 1620px;
 
-  // width: 1920px;
-  // height: 1200px;
+  //螢幕尺寸1
+  // width:2160px;
+  // height: 1620px;
+
+
+  //螢幕尺寸2
+  width: 1920px;
+  height: 1200px;
 
   margin: 0 auto;
   overflow: hidden;

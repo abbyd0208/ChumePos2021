@@ -11609,7 +11609,7 @@ a {
   transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
-.order_block .sort_list a span, .order_block .product_panel .product_list a span, .menu_group a span {
+.order_block .product_panel .product_list a span, .order_block .sort_list a span, .menu_group a span {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -11644,11 +11644,6 @@ a {
 
 html {
   font-size: 24px;
-}
-@media screen and (max-width: 1920px) and (max-height: 1200px) {
-  html {
-    font-size: 1.15rem;
-  }
 }
 
 * {
@@ -11819,7 +11814,7 @@ input::placeholder {
   font-weight: bold;
   margin-left: auto;
 }
-@media screen and (max-width: 1920px) and (max-height: 1200px) {
+@media screen and (max-width: 1920px) {
   .header {
     background-color: red;
   }
@@ -11845,8 +11840,8 @@ input::placeholder {
 .content {
   border: 1px solid hotpink;
   background-color: #F1F4F4;
-  width: 2160px;
-  height: 1620px;
+  width: 1920px;
+  height: 1200px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -12442,62 +12437,37 @@ input::placeholder {
   margin-right: 0;
 }
 .order_block .card_list {
-  height: 1250px;
-  overflow-y: scroll;
-}
-.order_block .product_panel {
-  width: 100%;
-  height: calc(100% - 295px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.order_block .product_panel .btn_list {
-  height: 1160px;
-  overflow: hidden;
-  overflow-y: scroll;
-  padding: 20px 15px;
-  position: relative;
-}
-.order_block .product_panel .product_list .btn {
-  padding: 20px 8px 20px 20px;
-}
-.order_block .product_panel .product_list a span {
-  max-width: calc(100% - 75px);
-  -webkit-line-clamp: 1;
-}
-.order_block .product_panel .control_list {
-  height: 1160px;
-  overflow: hidden;
+  height: calc(100% - 178px);
   overflow-y: scroll;
 }
 .order_block .sort_list {
-  margin: 0 auto 1rem;
-  height: 270px;
+  margin: 0 auto 20px;
+  height: 256px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .order_block .sort_list .slick-slide {
   margin: 0 60px;
 }
+.order_block .sort_list .slick-slide > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .order_block .sort_list .slick-next {
-  right: 15px;
+  right: 0px;
   background-color: #00A3A3;
   -webkit-mask: url(../images/icon_next.svg) no-repeat center/60%;
           mask: url(../images/icon_next.svg) no-repeat center/60%;
 }
 .order_block .sort_list .slick-prev {
-  left: 15px;
+  left: 0px;
   background-color: #00A3A3;
   -webkit-mask: url(../images/icon_prev.svg) no-repeat center/60%;
           mask: url(../images/icon_prev.svg) no-repeat center/60%;
 }
 .order_block .sort_list .slick-next,
 .order_block .sort_list .slick-prev {
-  border: 2px solid cornflowerblue;
   background-color: #00A3A3;
   height: 100%;
   width: 60px;
@@ -12506,6 +12476,9 @@ input::placeholder {
 .order_block .sort_list .slick-next::before,
 .order_block .sort_list .slick-prev::before {
   display: none;
+}
+.order_block .sort_list .slick-arrow.slick-disabled {
+  background-color: #C4C4C4;
 }
 .order_block .sort_list a {
   width: calc(16.6667% -10px);
@@ -12519,22 +12492,43 @@ input::placeholder {
           transform: translate(-50%, -50%);
   width: calc(100% - 50px);
 }
-@media screen and (max-width: 1920px) and (max-height: 1200px) {
-  .order_block .left_box {
-    overflow: hidden;
-  }
-  .order_block .card_list {
-    overflow-y: scroll;
-    height: 1210px;
-  }
-  .order_block .product_panel {
-    height: 1140px;
-  }
-  .order_block .product_panel .btn_list {
-    height: 100%;
-  }
-  .order_block .product_panel .control_list {
-    height: 1140px;
+.order_block .product_panel {
+  width: 100%;
+  height: calc(100% - 276px);
+  padding: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.order_block .product_panel .btn_list {
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 20px 15px;
+  position: relative;
+  height: 600px;
+}
+.order_block .product_panel .product_list .btn {
+  padding: 20px 8px 20px 20px;
+}
+.order_block .product_panel .product_list a span {
+  max-width: calc(100% - 75px);
+  -webkit-line-clamp: 1;
+}
+.order_block .product_panel .control_list {
+  height: 600px;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-top: -8px;
+}
+@media screen and (max-width: 1920px) {
+  .order_block .sort_list a span {
+    width: calc(100% - 30px);
   }
 }
 
