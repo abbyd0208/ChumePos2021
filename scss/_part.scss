@@ -76,6 +76,7 @@
   }
 
   &.btn-md {
+      font-size: 1rem;
     // padding: 1rem;
   }
 }
@@ -89,6 +90,7 @@
     @include icon($primary-light, inherit);
   }
 
+
   img {
     display: inline-block;
     font-size: 1.2rem;
@@ -99,6 +101,10 @@
   }
     
 }
+
+._iconMd{
+    font-size: 1.2rem!important;
+} 
 
 ._iconl {
   margin-left: 0.5rem;
@@ -234,6 +240,40 @@ $transition-default: 0.25s ease-out 0.1s;
   }
 }
 
+
+// counter
+// 計算機
+.counter {
+    // border: 1px solid red;
+    @include flex-spaceBetween;
+    width: 180px;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 60px;
+    line-height: 60px;
+    background-color: $white;
+    div {
+      flex: 1;
+    }
+  
+    .plus {
+      color: $primary;
+    }
+  
+    .minus {
+      color: $main-gray;
+    }
+  
+    .plus,
+    .minus {
+        font-size: 2.5rem;
+    }
+  
+    // @include border-basic(1px, $lighten-gray);
+    @include border-radius(1rem);
+  }
+
+
 // 分頁
 .pager_block {
   // border: 1px solid green;
@@ -311,6 +351,13 @@ $transition-default: 0.25s ease-out 0.1s;
     //最左邊的item 2021-08
     ._line {border-right: 1px solid $light-gray;}
   }
+}
+
+// .invoice_list
+.invoice_list{
+    *{ border: 1px solid red;}
+    li{ @include flex-spaceBetween; align-items: flex-start; border-bottom: 1px dotted $light-gray; padding-bottom: .5rem; margin-bottom: .5rem;}
+
 }
 
 //ga0808
@@ -496,14 +543,14 @@ $transition-default: 0.25s ease-out 0.1s;
     margin-bottom: 1rem;
     width: 18%;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 0.3rem;
 
     .right_box {
       @include flex-column;
 
       ._icon {
         margin-right: 0;
-
+        font-size: 1.8rem;
         &:nth-of-type(2) {
           svg {
             color: $main-gray;
@@ -513,6 +560,9 @@ $transition-default: 0.25s ease-out 0.1s;
     }
   }
 }
+
+
+
 
 // C.2開始點餐
 .order_block {

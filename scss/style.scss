@@ -6,8 +6,6 @@
 @import './bootstrap/bootstrap.scss';
 
 
-
-
 // 基礎設定
 @import './custom-mixins';
 @import './global';
@@ -20,3 +18,7 @@
 // slick
 @import '../js/slick/slick.scss';
 @import '../js/slick/slick-theme.scss';
+
+
+// page
+@import './page';

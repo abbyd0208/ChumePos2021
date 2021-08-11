@@ -91,6 +91,8 @@ input::placeholder {
 
 .header {
   @include flex-alignCenter;
+  width: 2160px; 
+  margin: 0 auto;
   color: $main-gray;
   background-color: $white;
   // position: fixed;
@@ -128,7 +130,7 @@ input::placeholder {
   }
 
   @include secondary-device{
-    background-color: red ;
+    width: 1920px;
   }
 
 }
@@ -170,6 +172,14 @@ input::placeholder {
 
   margin: 0 auto;
   overflow: hidden;
+
+   // 第二種螢幕1920寬樣式
+   @include secondary-device {
+    
+    width:1920px;
+    height: 1200px;
+  }
+
 }
 
 .content_customer{
@@ -177,6 +187,7 @@ input::placeholder {
   width:1024px;
   height: 768px;
   margin: 0 auto;
+  
 }
 
 .inner_content{

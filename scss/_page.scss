@@ -1,0 +1,41 @@
+
+// 首頁用
+.index{
+    .main_box{
+        padding: 1.5rem;
+    }
+    .control_list{
+        height: 100%;
+        padding: 0 1rem;
+        border: 1px solid red;
+       
+    }
+   
+    .menu_block{
+       height: calc( 1620px - 130px );
+    //    border:2px solid blue;
+       overflow:hidden;
+       overflow-y: scroll;
+        .btn em{
+            vertical-align: middle;
+        }
+    }
+    
+    
+    // 第二種螢幕1920寬樣式
+    @include secondary-device {
+        .menu_block{
+            height: calc( 1200px - 130px );
+           
+         }
+        
+    }
+
+}
+
+
+.customer_block{
+
+    font-size: 1rem;
+
+}
