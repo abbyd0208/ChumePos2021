@@ -1,22 +1,45 @@
-.modal-header{
-    padding: 2rem;
-    border-bottom: 0px;
-}
-
-.modal-content{
-    border-radius: 1rem;
-    background-color: $secondary;
-}
-
-.modal-body{
-    padding: 20px 50px;
-    .custom_block{
-        padding: 1.5rem;
-        border-radius: 1rem;
-        h4{ color: $dark;}
+.modal-header {
+  //0811
+  padding: 2rem 3rem 0;
+  border-bottom: 0px;
+  //0811 蓋過bootstrap原本column設定
+  .list-group {
+    flex-direction: row;
+  }
+  //0811 modal專屬btn字級
+  .btn_block {
+    margin: 1rem 0 0 0;
+    .btn {
+      font-size: 1.75rem;
     }
-}
-.modal-footer{
-    border-top: 0px;
+  }
 }
 
+.modal-content {
+  border-radius: 1rem;
+  background-color: $secondary;
+  //0811
+  .item ._icon svg {
+    font-size: 1rem;
+    @include icon(white, 1rem);
+    background-color: #00cccc;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: 0.5rem;
+  }
+}
+
+.modal-body {
+  padding: 1.25rem 3rem;
+  .custom_block {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    h4 {
+      color: $dark;
+    }
+  }
+}
+.modal-footer {
+  border-top: 0px;
+}

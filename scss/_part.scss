@@ -41,10 +41,10 @@
 }
 
 .btn {
-    display: block;
-    letter-spacing: 2px;
-    background-color: $white;
-    padding: 15px;
+  display: block;
+  letter-spacing: 2px;
+  background-color: $white;
+  padding: 15px;
 
   &.bg-primary {
     color: $white;
@@ -84,7 +84,7 @@
 ._icon {
   margin-right: 0.5rem;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.75rem;
   svg {
     @include icon($primary-light, inherit);
   }
@@ -94,10 +94,9 @@
     font-size: 1.2rem;
 
     svg {
-        @include icon($primary-light, inherit);
+      @include icon($primary-light, inherit);
     }
   }
-    
 }
 
 ._iconl {
@@ -239,13 +238,14 @@ $transition-default: 0.25s ease-out 0.1s;
   // border: 1px solid green;
   @include flex-spaceBetween;
   margin: 30px 0;
+  font-size: 2rem;
 
   // *{ border:1px solid #000;}
   .page {
     a {
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
       vertical-align: middle;
       text-align: center;
       margin: 0 0.25rem;
@@ -271,71 +271,71 @@ $transition-default: 0.25s ease-out 0.1s;
   }
 }
 
-// .order_list
 .order_list {
-    // border: 1px solid #666;
+  // border: 1px solid #666;
 
-    .item_group {
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-        // padding: 1rem;
-        border-radius: 1rem;
-        background-color: $white;
-    }
+  .item_group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    // padding: 1rem;
+    border-radius: 1rem;
+    background-color: #ffffff;
+  }
 
   .item {
-    color: $black;
-        width: 100%;
-        padding: 1rem;
-        display: flex;
-        align-items: center;
+    color: #000;
+    padding: 1rem;
 
     p {
-      font-size: 1.5rem;
+      //2021-08-11
+      font-size: 1.75rem;
     }
 
     span {
-      font-size: 1.5rem;
+      //2021-08-11
+      font-size: 1.75rem;
     }
     ._icon {
-        margin-right: 1.5rem;
-        img {
-            width: 80px;
-            height: 80px;
-        }
-        svg {
-            font-size: 60px;
-        }
+      margin-right: 1rem;
+      vertical-align: middle;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      svg {
+        font-size: 60px;
+      }
     }
     //最左邊的item 2021-08
-    ._line {border-right: 1px solid $light-gray;}
+    ._line {
+      border-right: 1px solid $light-gray;
+    }
   }
 }
-
 //ga0808
 //按鈕群
 .menu_block {
-    // height: calc(100% - 130px);
-    padding: 8px;
+  // height: calc(100% - 130px);
+  padding: 8px;
 
-    a {
-        position: relative;
-        height: 110px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+  a {
+    position: relative;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-        span {
-        max-height: 90px;
-        }
-
-        em {
-        font-size: 2rem;
-        vertical-align: sub;
-        margin-right: 20px;
-        }
+    span {
+      max-height: 90px;
     }
+
+    em {
+      font-size: 2rem;
+      vertical-align: sub;
+      margin-right: 20px;
+    }
+  }
 }
 
 //當文字需要兩行的時候父層要加menu_group，a 底下要包 span
@@ -365,20 +365,20 @@ $transition-default: 0.25s ease-out 0.1s;
 //菜單卡片
 
 .card_list {
-    @include btn-wrap(1rem, 20px, 0px);
+  @include btn-wrap(1rem, 20px, 0px);
 
-    a {
-        background-color: $secondary !important;
-    }
+  a {
+    background-color: $secondary !important;
+  }
 
-    .card_title,
-    .card_body {
-        @include flex-spaceBetween;
-    }
+  .card_title,
+  .card_body {
+    @include flex-spaceBetween;
+  }
 
-    h6 {
-        margin: 0;
-    }
+  h6 {
+    margin: 0;
+  }
 
   ul {
     margin-top: 5px;
@@ -423,7 +423,6 @@ $transition-default: 0.25s ease-out 0.1s;
     }
   }
 }
-
 
 //小鍵盤
 .numpad {
@@ -516,181 +515,174 @@ $transition-default: 0.25s ease-out 0.1s;
 
 // C.2開始點餐
 .order_block {
-    .left_box {
-        border-radius: 0 0 1rem 1rem;
-        background-color: $lighten-blue;
-        height: 100%;
+  .left_box {
+    border-radius: 0 0 1rem 1rem;
+    background-color: $lighten-blue;
+    height: 100%;
+  }
+
+  .right_box {
+    // @include Dflex;
+  }
+
+  //左邊訂單資訊
+  .order_detail {
+    // background-color: $secondary;
+    box-shadow: none;
+    @include border-radius(1rem);
+
+    > div {
+      @include flex-spaceBetween;
+      border-bottom: 15px solid $bg-gray;
+      padding: 15px;
+      margin-left: -15px;
+      margin-right: -15px;
+
+      p {
+        @include flex-alignCenter;
+      }
+
+      &.info {
+        border-radius: 1rem 1rem 0 0;
+        color: $dark;
+      }
+
+      &.subtotal {
+        color: $main-gray;
+
+        span {
+          margin-left: 15px;
+          margin-right: 15px;
+          vertical-align: middle;
+        }
+
+        p:nth-last-of-type(1) span {
+          margin-right: 0;
+        }
+      }
     }
+  }
 
-    .right_box {
-        // @include Dflex;
-    }
+  //左邊已點內容
+  .card_list {
+    height: 1250px;
+    overflow-y: scroll;
 
-    //左邊訂單資訊
-    .order_detail {
-        // background-color: $secondary;
-        box-shadow: none;
-        @include border-radius(1rem);
-
-        >div {
-            @include flex-spaceBetween;
-            border-bottom: 15px solid $bg-gray;
-            padding: 15px;
-            margin-left: -15px;
-            margin-right: -15px;
-
-            p {
-                @include flex-alignCenter;
-            }
-
-            &.info {
-                border-radius: 1rem 1rem 0 0;
-                color: $dark;
-            }
-
-            &.subtotal {
-                color: $main-gray;
-
-                span {
-                    margin-left: 15px;
-                    margin-right: 15px;
-                    vertical-align: middle;
-                }
-
-                p:nth-last-of-type(1) span {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-
-    //左邊已點內容
-    .card_list {
-        height: 1250px;
-        overflow-y: scroll;
-
-        @include secondary-device {
-            // height:1000px;
-        }
-    }
-
-    .product_panel {
-        width: 100%;
-        height: calc(100% - 295px); // 100% - sort270 - 25(待查)
-        // overflow: hidden;
-
-        @include Dflex;
-        justify-content: space-between;
-
-        .btn_list {
-            // height: calc(100% - 150px); // 100% - header 130px
-            height: 1160px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding: 20px 15px;
-            position: relative;
-
-        }
-
-
-        .product_list {
-            .btn {
-                padding: 20px 8px 20px 20px;
-            }
-
-            a span {
-                max-width: calc(100% - 75px);
-                @extend %text-ellipsis;
-                -webkit-line-clamp: 1;
-
-            }
-        }
-
-        .control_list {
-            // height: calc(100% - 130px);
-            height: 1160px;
-            overflow: hidden;
-            overflow-y: scroll;
-        }
-
-        .menu_block {
-            //    height: calc(100% - 130px);
-        }
-
-    }
-
-    //分類樣式
-    .sort_list {
-        margin: 0 auto 1rem;
-        height: 270px;
-
-        .slick-slide {
-            margin: 0 60px;
-            // text-align: center;
-        }
-
-        .slick-next {
-            right: 15px;
-            background-color: $primary;
-            // -webkit-mask:  url(icon.svg) no-repeat 50% 50%;
-            mask: url(../images/icon_next.svg) no-repeat center / 60%;
-            // background: url(../images/icon_next.svg) no-repeat center / contain;
-        }
-
-        .slick-prev {
-            left: 15px;
-            background-color: $primary;
-            // background: url(../images/icon_prev.svg) no-repeat center / contain;
-            mask: url(../images/icon_prev.svg) no-repeat center / 60%;
-
-        }
-
-        .slick-next,
-        .slick-prev {
-            border: 2px solid cornflowerblue;
-            background-color: $primary;
-            height: 100%;
-            width: 60px;
-            z-index: 5;
-
-            &::before {
-                display: none;
-            }
-        }
-
-        a {
-            // max-width: 190px;
-            width: calc(16.6667% -10px);
-            margin: 5px;
-
-            span {
-                @extend %text-ellipsis;
-                @include center;
-                width: calc(100% - 50px);
-            }
-        }
-    }
-
-    // 第二種螢幕1920寬樣式
     @include secondary-device {
-        .left_box{
-            overflow:hidden;
-            // height: 100%;
-        }
-        .card_list {
-            overflow-y: scroll;
-            height: 1210px;
-        }
-       .product_panel {
-           height: 1140px;
-           .btn_list {
-            height: 100%;
-        }
-        .control_list{
-            height: 1140px;
-        }
-       }
-        
+      // height:1000px;
+    }
+  }
+
+  .product_panel {
+    width: 100%;
+    height: calc(100% - 295px); // 100% - sort270 - 25(待查)
+    // overflow: hidden;
+
+    @include Dflex;
+    justify-content: space-between;
+
+    .btn_list {
+      // height: calc(100% - 150px); // 100% - header 130px
+      height: 1160px;
+      overflow: hidden;
+      overflow-y: scroll;
+      padding: 20px 15px;
+      position: relative;
     }
 
+    .product_list {
+      .btn {
+        padding: 20px 8px 20px 20px;
+      }
+
+      a span {
+        max-width: calc(100% - 75px);
+        @extend %text-ellipsis;
+        -webkit-line-clamp: 1;
+      }
+    }
+
+    .control_list {
+      // height: calc(100% - 130px);
+      height: 1160px;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
+    .menu_block {
+      //    height: calc(100% - 130px);
+    }
+  }
+
+  //分類樣式
+  .sort_list {
+    margin: 0 auto 1rem;
+    height: 270px;
+
+    .slick-slide {
+      margin: 0 60px;
+      // text-align: center;
+    }
+
+    .slick-next {
+      right: 15px;
+      background-color: $primary;
+      // -webkit-mask:  url(icon.svg) no-repeat 50% 50%;
+      mask: url(../images/icon_next.svg) no-repeat center / 60%;
+      // background: url(../images/icon_next.svg) no-repeat center / contain;
+    }
+
+    .slick-prev {
+      left: 15px;
+      background-color: $primary;
+      // background: url(../images/icon_prev.svg) no-repeat center / contain;
+      mask: url(../images/icon_prev.svg) no-repeat center / 60%;
+    }
+
+    .slick-next,
+    .slick-prev {
+      border: 2px solid cornflowerblue;
+      background-color: $primary;
+      height: 100%;
+      width: 60px;
+      z-index: 5;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    a {
+      // max-width: 190px;
+      width: calc(16.6667% -10px);
+      margin: 5px;
+
+      span {
+        @extend %text-ellipsis;
+        @include center;
+        width: calc(100% - 50px);
+      }
+    }
+  }
+
+  // 第二種螢幕1920寬樣式
+  @include secondary-device {
+    .left_box {
+      overflow: hidden;
+      // height: 100%;
+    }
+    .card_list {
+      overflow-y: scroll;
+      height: 1210px;
+    }
+    .product_panel {
+      height: 1140px;
+      .btn_list {
+        height: 100%;
+      }
+      .control_list {
+        height: 1140px;
+      }
+    }
+  }
 }
