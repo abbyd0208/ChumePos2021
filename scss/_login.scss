@@ -1,0 +1,16 @@
+.login_bg {
+  background-color: #ffffff;
+  width: 100%;
+  height: calc(100vh - 130px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: 475px;
+    img {
+      width: 160px;
+      margin: 0 auto 45px;
+    }
+  }
+}

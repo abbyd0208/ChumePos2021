@@ -46,9 +46,13 @@
 
 
 @mixin secondary-device{
-  @media screen and (max-width:1920px) and (max-height:1200px)  {
+  //0811 ga 先以寬度為主
+  @media screen and (max-width:1920px)   {
     @content;
   }
+  // @media screen and (max-width:1920px) and (max-height:1200px)  {
+  //   @content;
+  // }
 }
 
 @mixin media-btween($max,$min){

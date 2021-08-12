@@ -76,6 +76,7 @@
   }
 
   &.btn-md {
+    font-size: 1rem;
     // padding: 1rem;
   }
 }
@@ -85,6 +86,7 @@
   margin-right: 0.5rem;
   display: inline-block;
   font-size: 1.75rem;
+
   svg {
     @include icon($primary-light, inherit);
   }
@@ -92,11 +94,11 @@
   img {
     display: inline-block;
     font-size: 1.2rem;
-
-    svg {
-      @include icon($primary-light, inherit);
-    }
   }
+}
+
+._iconMd {
+  font-size: 1.2rem !important;
 }
 
 ._iconl {
@@ -233,12 +235,44 @@ $transition-default: 0.25s ease-out 0.1s;
   }
 }
 
+// counter
+// 計算機
+.counter {
+  // border: 1px solid red;
+  @include flex-spaceBetween;
+  width: 180px;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 60px;
+  line-height: 60px;
+  background-color: $white;
+  div {
+    flex: 1;
+  }
+
+  .plus {
+    color: $primary;
+  }
+
+  .minus {
+    color: $main-gray;
+  }
+
+  .plus,
+  .minus {
+    font-size: 2.5rem;
+  }
+
+  // @include border-basic(1px, $lighten-gray);
+  @include border-radius(1rem);
+}
+
 // 分頁
 .pager_block {
   // border: 1px solid green;
   @include flex-spaceBetween;
   margin: 30px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   // *{ border:1px solid #000;}
   .page {
@@ -288,31 +322,49 @@ $transition-default: 0.25s ease-out 0.1s;
     padding: 1rem;
 
     p {
-      //2021-08-11
-      font-size: 1.75rem;
+      // 0812 alvin
+      font-size: 1.5rem;
     }
 
     span {
-      //2021-08-11
-      font-size: 1.75rem;
+      // 0812 alvin
+      font-size: 1.5rem;
     }
+
     ._icon {
       margin-right: 1rem;
       vertical-align: middle;
+
       img {
         width: 80px;
         height: 80px;
       }
+
       svg {
         font-size: 60px;
       }
     }
+
     //最左邊的item 2021-08
     ._line {
       border-right: 1px solid $light-gray;
     }
   }
 }
+
+// .invoice_list
+.invoice_list {
+  // *{ border: 1px solid red;}
+  li {
+    @include flex-spaceBetween;
+    align-items: flex-start;
+    border-bottom: 1px dotted $light-gray;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: $main-gray;
+  }
+}
+
 //ga0808
 //按鈕群
 .menu_block {
@@ -328,6 +380,7 @@ $transition-default: 0.25s ease-out 0.1s;
 
     span {
       max-height: 90px;
+      line-height: 35px;
     }
 
     em {
@@ -427,7 +480,8 @@ $transition-default: 0.25s ease-out 0.1s;
 //小鍵盤
 .numpad {
   // padding: 30px;
-  background-color: pink;
+  margin: 0 auto;
+  background-color: $secondary;
   width: max-content;
   // width: 500px;
 
@@ -439,14 +493,14 @@ $transition-default: 0.25s ease-out 0.1s;
 
   .btn {
     @include border-radius(10px);
-    font-size: 4.7rem;
-    line-height: 112px;
+    font-size: 4.2rem;
+    line-height: 120px;
     width: 120px;
     height: 120px;
     margin-bottom: 0.5rem;
     margin-right: 0.5rem;
     overflow: hidden;
-
+    padding: 0;
     svg {
       width: 4.5rem;
     }
@@ -458,17 +512,18 @@ $transition-default: 0.25s ease-out 0.1s;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 1rem;
+    margin-right: 0;
     text-align: right;
     color: $main-gray;
     font-weight: bold;
   }
 
   .numbers {
-    max-width: 384px;
+    max-width: 388px;
   }
 
   .controlers {
-    max-width: 130px;
+    max-width: 120px;
 
     .btn {
       margin-right: 0;
@@ -495,14 +550,14 @@ $transition-default: 0.25s ease-out 0.1s;
     margin-bottom: 1rem;
     width: 18%;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 0.3rem;
 
     .right_box {
       @include flex-column;
 
       ._icon {
         margin-right: 0;
-
+        font-size: 1.8rem;
         &:nth-of-type(2) {
           svg {
             color: $main-gray;
@@ -513,176 +568,36 @@ $transition-default: 0.25s ease-out 0.1s;
   }
 }
 
-// C.2開始點餐
-.order_block {
-  .left_box {
-    border-radius: 0 0 1rem 1rem;
-    background-color: $lighten-blue;
-    height: 100%;
+// input
+.password_box {
+  position: relative;
+
+  label {
+    @include v-center;
+    left: 0.75rem;
+    background-color: transparent;
+    color: $main-gray;
+    border-color: transparent;
   }
 
-  .right_box {
-    // @include Dflex;
+  input {
   }
-
-  //左邊訂單資訊
-  .order_detail {
-    // background-color: $secondary;
-    box-shadow: none;
-    @include border-radius(1rem);
-
-    > div {
-      @include flex-spaceBetween;
-      border-bottom: 15px solid $bg-gray;
-      padding: 15px;
-      margin-left: -15px;
-      margin-right: -15px;
-
-      p {
-        @include flex-alignCenter;
-      }
-
-      &.info {
-        border-radius: 1rem 1rem 0 0;
-        color: $dark;
-      }
-
-      &.subtotal {
-        color: $main-gray;
-
-        span {
-          margin-left: 15px;
-          margin-right: 15px;
-          vertical-align: middle;
-        }
-
-        p:nth-last-of-type(1) span {
-          margin-right: 0;
-        }
-      }
-    }
+  span {
+    @include v-center;
+    right: 0.75rem;
+    background-color: transparent;
+    color: $primary;
+    border-color: transparent;
   }
+}
 
-  //左邊已點內容
-  .card_list {
-    height: 1250px;
-    overflow-y: scroll;
+// info_box
+.info_box {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
 
-    @include secondary-device {
-      // height:1000px;
-    }
-  }
-
-  .product_panel {
-    width: 100%;
-    height: calc(100% - 295px); // 100% - sort270 - 25(待查)
-    // overflow: hidden;
-
-    @include Dflex;
-    justify-content: space-between;
-
-    .btn_list {
-      // height: calc(100% - 150px); // 100% - header 130px
-      height: 1160px;
-      overflow: hidden;
-      overflow-y: scroll;
-      padding: 20px 15px;
-      position: relative;
-    }
-
-    .product_list {
-      .btn {
-        padding: 20px 8px 20px 20px;
-      }
-
-      a span {
-        max-width: calc(100% - 75px);
-        @extend %text-ellipsis;
-        -webkit-line-clamp: 1;
-      }
-    }
-
-    .control_list {
-      // height: calc(100% - 130px);
-      height: 1160px;
-      overflow: hidden;
-      overflow-y: scroll;
-    }
-
-    .menu_block {
-      //    height: calc(100% - 130px);
-    }
-  }
-
-  //分類樣式
-  .sort_list {
-    margin: 0 auto 1rem;
-    height: 270px;
-
-    .slick-slide {
-      margin: 0 60px;
-      // text-align: center;
-    }
-
-    .slick-next {
-      right: 15px;
-      background-color: $primary;
-      // -webkit-mask:  url(icon.svg) no-repeat 50% 50%;
-      mask: url(../images/icon_next.svg) no-repeat center / 60%;
-      // background: url(../images/icon_next.svg) no-repeat center / contain;
-    }
-
-    .slick-prev {
-      left: 15px;
-      background-color: $primary;
-      // background: url(../images/icon_prev.svg) no-repeat center / contain;
-      mask: url(../images/icon_prev.svg) no-repeat center / 60%;
-    }
-
-    .slick-next,
-    .slick-prev {
-      border: 2px solid cornflowerblue;
-      background-color: $primary;
-      height: 100%;
-      width: 60px;
-      z-index: 5;
-
-      &::before {
-        display: none;
-      }
-    }
-
-    a {
-      // max-width: 190px;
-      width: calc(16.6667% -10px);
-      margin: 5px;
-
-      span {
-        @extend %text-ellipsis;
-        @include center;
-        width: calc(100% - 50px);
-      }
-    }
-  }
-
-  // 第二種螢幕1920寬樣式
-  @include secondary-device {
-    .left_box {
-      overflow: hidden;
-      // height: 100%;
-    }
-    .card_list {
-      overflow-y: scroll;
-      height: 1210px;
-    }
-    .product_panel {
-      height: 1140px;
-      .btn_list {
-        height: 100%;
-      }
-      .control_list {
-        height: 1140px;
-      }
-    }
+  span {
+    color: $main-gray;
   }
 }

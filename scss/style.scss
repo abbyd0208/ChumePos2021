@@ -5,9 +5,6 @@
 @import './bootstrap/variables';
 @import './bootstrap/bootstrap.scss';
 
-
-
-
 // 基礎設定
 @import './custom-mixins';
 @import './global';
@@ -16,7 +13,14 @@
 @import './part';
 @import './modal';
 
-
 // slick
 @import '../js/slick/slick.scss';
 @import '../js/slick/slick-theme.scss';
+
+// login
+@import './login';
+
+//gaa
+@import './order';
+// page
+@import './page';
