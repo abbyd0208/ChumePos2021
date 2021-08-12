@@ -152,3 +152,8 @@ input::placeholder {
   @include Dflex;
   height: calc(100vh - 130px); //扣掉header高度
 }
+
+// 去除關閉紐外框
+button:focus {
+  outline: none;
+}

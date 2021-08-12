@@ -12088,9 +12088,9 @@ input::placeholder {
   width: 180px;
   text-align: center;
   font-size: 1.5rem;
-  height: 60px;
-  line-height: 60px;
   background-color: #fff;
+  padding: 0.3rem 0.5rem;
+  height: 80px;
   border-radius: 1rem;
 }
 .counter div {
@@ -12107,6 +12107,7 @@ input::placeholder {
 .counter .plus,
 .counter .minus {
   font-size: 2.5rem;
+  line-height: 0;
 }
 
 .pager_block {
@@ -12415,7 +12416,7 @@ input::placeholder {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0.3rem;
+  padding: 0.5rem;
 }
 .table_list .item .right_box {
   display: -webkit-box;
@@ -12428,10 +12429,16 @@ input::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 .table_list .item .right_box ._icon {
   margin-right: 0;
   font-size: 1.8rem;
+  line-height: 0;
+  margin-bottom: 0.5rem;
+}
+.table_list .item .right_box ._icon:nth-of-type(2) {
+  margin-bottom: 0rem;
 }
 .table_list .item .right_box ._icon:nth-of-type(2) svg {
   color: #666666;
@@ -12534,12 +12541,25 @@ input::placeholder {
   overflow-y: auto;
   padding: 1.5rem;
   border-radius: 1rem;
+  background-color: white;
 }
 .modal-body .custom_block .btn_block {
   margin-bottom: 1rem;
 }
 .modal-body .custom_block h4 {
   color: #0e5557;
+}
+.modal-body .operate {
+  margin-top: 1rem;
+}
+.modal-body .operate .btn_block {
+  margin: 0;
+}
+.modal-body .operate .btn_block .btn {
+  padding: 0.5rem 0.5rem;
+}
+.modal-body .btn_group {
+  font-size: 1.5rem;
 }
 
 .modal-footer {
@@ -12879,8 +12899,10 @@ input::placeholder {
   margin-right: 0;
 }
 .order_block .card_list {
-  height: calc(100% - 178px);
+  height: calc(100% - 203px);
   overflow-y: scroll;
+  margin-right: -15px;
+  padding-right: 15px;
 }
 .order_block .sort_list {
   margin: 0 auto 20px;
@@ -12936,7 +12958,7 @@ input::placeholder {
 }
 .order_block .product_panel {
   width: 100%;
-  height: calc(100% - 276px);
+  height: calc(100% - 268px);
   padding: 8px;
   overflow: hidden;
   display: -webkit-box;
@@ -12973,8 +12995,15 @@ input::placeholder {
   height: 100%;
 }
 .order_block .product_panel .interetControl_list .reason_list {
-  padding: 20px 15px;
-  height: calc(100% - 110px);
+  padding: 20px 0 20px 15px;
+  height: calc(100% - 138px);
+  overflow: hidden;
+}
+.order_block .product_panel .interetControl_list .reason_list h5 {
+  color: #0e5557;
+}
+.order_block .product_panel .interetControl_list .reason_list .list_box {
+  height: calc(100% 68px);
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -12984,25 +13013,31 @@ input::placeholder {
   }
 }
 
+.index .only-md {
+  display: none;
+}
 .index .main_box {
   padding: 1.5rem;
+}
+.index .col-5 {
+  height: 100%;
 }
 .index .control_list {
   height: 100%;
   padding: 0 1rem;
   margin-top: -8px;
-}
-.index .menu_block {
-  height: calc(1620px - 130px);
   overflow: hidden;
   overflow-y: scroll;
+}
+.index .menu_block {
+  padding-right: 0px;
 }
 .index .menu_block .btn em {
   vertical-align: middle;
 }
 @media screen and (max-width: 1920px) {
-  .index .menu_block {
-    height: calc(1200px - 130px);
+  .index .only-md {
+    display: inline-block;
   }
 }
 .index .btn_block {
@@ -13069,4 +13104,3 @@ input::placeholder {
   left: 0px;
   bottom: 0px;
 }
-/*# sourceMappingURL=style.css.map */

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.2未結帳/開始點餐</title>
     <script data-search-pseudo-elements defer src="dist/fontawesome-5.15.2/js/all.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" type="text/css" media="print" href="css/print.min.css">
 
 </head>
@@ -40,7 +40,8 @@
                 </div>
                 <!-- 已點餐點 預設無內容-->
                 <div class="card_list">
-                    <a class="btn bg-secondary btn-block" data-toggle="modal" data-target="#exampleModal">
+                    <!-- 觸發客製化Modal -->
+                    <a class="btn bg-secondary btn-block" data-toggle="modal" data-target="#productModal">
                         <div class="card_title">
                             <h6>麻辣三寶鴨血鍋<span class="ml-3">X2</span></h6>
                             <p>$250</p>
@@ -135,7 +136,8 @@
                 <div class="product_panel">
                     <!-- 產品選單 -->
                     <div class="product_list btn_list main_box col-6">
-                        <a class="btn bg-secondary btn-block active" data-toggle="modal" data-target="#exampleModal">
+                        <!-- 觸發客製化Modal -->
+                        <a class="btn bg-secondary btn-block active" data-toggle="modal" data-target="#productModal">
                             <span>產品名稱 </span>
                             <em class="_iconBg"><i class="fas fa-chevron-right"></i></em>
                         </a>
@@ -229,8 +231,8 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal">
+    <!-- 客製化Modal -->
+    <div class="modal fade" id="productModal">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">

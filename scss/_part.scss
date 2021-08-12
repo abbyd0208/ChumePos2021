@@ -243,9 +243,9 @@ $transition-default: 0.25s ease-out 0.1s;
   width: 180px;
   text-align: center;
   font-size: 1.5rem;
-  height: 60px;
-  line-height: 60px;
   background-color: $white;
+  padding: 0.3rem 0.5rem;
+  height: 80px;
   div {
     flex: 1;
   }
@@ -261,6 +261,7 @@ $transition-default: 0.25s ease-out 0.1s;
   .plus,
   .minus {
     font-size: 2.5rem;
+    line-height: 0;
   }
 
   // @include border-basic(1px, $lighten-gray);
@@ -543,21 +544,25 @@ $transition-default: 0.25s ease-out 0.1s;
   @include flex-spaceBetween;
 
   .item {
+    // *{ border: 1px solid red;}
     @include flex-spaceBetween;
     @include border-basic(1px, $light-gray);
     @include border-radius(1rem);
     margin-bottom: 1rem;
     width: 18%;
     align-items: flex-start;
-    padding: 0.3rem;
+    padding: 0.5rem;
 
     .right_box {
       @include flex-column;
-
+      text-align: center;
       ._icon {
         margin-right: 0;
         font-size: 1.8rem;
+        line-height: 0;
+        margin-bottom: 0.5rem;
         &:nth-of-type(2) {
+          margin-bottom: 0rem;
           svg {
             color: $main-gray;
           }
