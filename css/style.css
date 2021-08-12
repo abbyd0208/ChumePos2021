@@ -9424,6 +9424,8 @@ input::placeholder {
     overflow-y: auto;
     padding: 1.5rem;
     border-radius: 1rem; }
+    .modal-body .custom_block .btn_block {
+      margin-bottom: 1rem; }
     .modal-body .custom_block h4 {
       color: #0e5557; }
 

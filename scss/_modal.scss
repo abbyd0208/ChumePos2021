@@ -51,6 +51,9 @@
     overflow-y: auto;
     padding: 1.5rem;
     border-radius: 1rem;
+    .btn_block{
+      margin-bottom: 1rem;
+    }
     h4 {
       color: $dark;
     }
