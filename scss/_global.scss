@@ -4,11 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 // // font-family: 'Roboto', sans-serif;
 
-html{
-font-size: $font-size-base;
-@include secondary-device{
-  font-size: $font-size-base-2 ;
-}
+html {
+  font-size: $font-size-base;
+  @include secondary-device {
+    font-size: $font-size-base-2;
+  }
 }
 
 * {
@@ -20,8 +20,7 @@ font-size: $font-size-base;
 }
 
 body {
-
-  font-family:'Roboto', 'Noto Sans TC',  $font-family-sans-serif;
+  font-family: 'Roboto', 'Noto Sans TC', $font-family-sans-serif;
   // overflow-x: hidden;
   line-height: 1.8;
   position: relative;
@@ -33,7 +32,9 @@ body {
   }
 }
 
-p{ margin-bottom: 0;}
+p {
+  margin-bottom: 0;
+}
 
 img,
 a {
@@ -41,10 +42,9 @@ a {
   @extend %transition-cubic;
 }
 
-a:hover{
-  text-decoration:none;
+a:hover {
+  text-decoration: none;
 }
-
 
 .web-display {
   @include web-display;
@@ -54,10 +54,9 @@ a:hover{
   @include mob-display;
 }
 
-.btn{
-
+.btn {
   // 0804ga照layout調整
-  @include border-radius(.7rem);
+  @include border-radius(0.7rem);
   padding: 1.2rem 1.8rem;
 }
 
@@ -84,9 +83,6 @@ input::placeholder {
   appearance: none;
 }
 
-
-
-
 //header ============
 
 .header {
@@ -106,31 +102,29 @@ input::placeholder {
   // background-color: $white;
 
   .info {
-      @include flex-alignCenter;
+    @include flex-alignCenter;
 
-      * {
-          margin-bottom: 0;
-      }
-
+    * {
+      margin-bottom: 0;
+    }
   }
 
   ._icon {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
 
   ._account {
-      color: $main-gray;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      margin-left: auto;
-      // font-size:1.2rem;
+    color: $main-gray;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-left: auto;
+    // font-size:1.2rem;
   }
 
-  @include secondary-device{
-    background-color: red ;
+  @include secondary-device {
+    background-color: red;
   }
-
 }
 
 // div ============
@@ -150,20 +144,17 @@ input::placeholder {
 .card,
 .shadow-basic,
 .tab_menu,
-.block_content ,
+.block_content,
 .btn.shadow-basic,
-.item_group
-{
+.item_group {
   @extend %basic-shadow;
 }
 
-
-
-.content{
+.content {
   border: 1px solid hotpink;
   background-color: $bg-gray;
-  width:2160px;
-  height: 1620px;
+  width: 2160px;
+  height: 100vh;
 
   // width: 1920px;
   // height: 1200px;
@@ -172,18 +163,17 @@ input::placeholder {
   overflow: hidden;
 }
 
-.content_customer{
-  border:1px solid purple;
-  width:1024px;
+.content_customer {
+  border: 1px solid purple;
+  width: 1024px;
   height: 768px;
   margin: 0 auto;
 }
 
-.inner_content{
-  padding:  30px 15px 15px;
+.inner_content {
+  padding: 30px 15px 15px;
   // margin-top: 150px;
   @include Dflex;
-  height: calc(100% - 130px); //扣掉header高度
+  height: calc(100vh - 130px); //扣掉header高度
   border: 1px solid cornflowerblue;
-  
 }

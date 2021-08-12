@@ -11846,7 +11846,7 @@ input::placeholder {
   border: 1px solid hotpink;
   background-color: #F1F4F4;
   width: 2160px;
-  height: 1620px;
+  height: 100vh;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -11865,7 +11865,7 @@ input::placeholder {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: calc(100% - 130px);
+  height: calc(100vh - 130px);
   border: 1px solid cornflowerblue;
 }
 
@@ -12102,7 +12102,7 @@ input::placeholder {
       -ms-flex-align: center;
           align-items: center;
   margin: 30px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .pager_block .page {
   display: -webkit-box;
@@ -12150,10 +12150,10 @@ input::placeholder {
   padding: 1rem;
 }
 .order_list .item p {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 .order_list .item span {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 .order_list .item ._icon {
   margin-right: 1rem;
@@ -12277,7 +12277,8 @@ input::placeholder {
 }
 
 .numpad {
-  background-color: pink;
+  margin: 0 auto;
+  background-color: #E1EFEF;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -12289,13 +12290,14 @@ input::placeholder {
 }
 .numpad .btn {
   border-radius: 10px;
-  font-size: 4.7rem;
-  line-height: 112px;
+  font-size: 4.2rem;
+  line-height: 120px;
   width: 120px;
   height: 120px;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
   overflow: hidden;
+  padding: 0;
 }
 .numpad .btn svg {
   width: 4.5rem;
@@ -12306,15 +12308,16 @@ input::placeholder {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 1rem;
+  margin-right: 0;
   text-align: right;
   color: #666666;
   font-weight: bold;
 }
 .numpad .numbers {
-  max-width: 384px;
+  max-width: 388px;
 }
 .numpad .controlers {
-  max-width: 130px;
+  max-width: 120px;
 }
 .numpad .controlers .btn {
   margin-right: 0;
@@ -12541,6 +12544,43 @@ input::placeholder {
   }
 }
 
+.password_box {
+  position: relative;
+}
+.password_box label {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0.75rem;
+  background-color: transparent;
+  color: #666666;
+  border-color: transparent;
+}
+.password_box span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0.75rem;
+  background-color: transparent;
+  color: #00A3A3;
+  border-color: transparent;
+}
+
+.info_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.info_box span {
+  color: #666666;
+}
+
 .modal-header {
   padding: 2rem 3rem 0;
   border-bottom: 0px;
@@ -12555,7 +12595,7 @@ input::placeholder {
   margin: 1rem 0 0 0;
 }
 .modal-header .btn_block .btn {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .modal-content {
@@ -12563,9 +12603,8 @@ input::placeholder {
   background-color: #E1EFEF;
 }
 .modal-content .item ._icon svg {
-  font-size: 1rem;
   color: white;
-  font-size: 1rem;
+  font-size: 10rem;
   background-color: #00cccc;
   border-radius: 50%;
   height: 3.5rem;
@@ -12586,6 +12625,13 @@ input::placeholder {
 
 .modal-footer {
   border-top: 0px;
+}
+
+.modal-lg.calc {
+  max-width: 630px;
+}
+.modal-lg.calc .modal-body {
+  padding: 0 60px 70px;
 }
 
 /* Slider */
@@ -12827,4 +12873,27 @@ input::placeholder {
 .slick-dots li.slick-active button:before {
   color: black;
   opacity: 0.75;
+}
+
+.login_bg {
+  background-color: #ffffff;
+  width: 100%;
+  height: calc(100vh - 130px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.login_bg form {
+  width: 475px;
+  height: 450px;
+}
+.login_bg form img {
+  width: 160px;
+  margin: 0 auto 45px;
 }

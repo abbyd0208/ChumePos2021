@@ -10,7 +10,7 @@
   .btn_block {
     margin: 1rem 0 0 0;
     .btn {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
     }
   }
 }
@@ -20,8 +20,7 @@
   background-color: $secondary;
   //0811
   .item ._icon svg {
-    font-size: 1rem;
-    @include icon(white, 1rem);
+    @include icon(white, 10rem);
     background-color: #00cccc;
     border-radius: 50%;
     height: 3.5rem;
@@ -42,4 +41,11 @@
 }
 .modal-footer {
   border-top: 0px;
+}
+
+.modal-lg.calc {
+  max-width: 630px;
+  .modal-body {
+    padding: 0 60px 70px;
+  }
 }
