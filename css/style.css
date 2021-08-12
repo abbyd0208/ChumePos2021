@@ -11933,7 +11933,7 @@ input::placeholder {
 ._icon {
   margin-right: 0.5rem;
   display: inline-block;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 ._icon svg {
   color: #00CCCC;
@@ -12090,6 +12090,7 @@ input::placeholder {
   font-size: 1.5rem;
   background-color: #fff;
   padding: 0.3rem 0.5rem;
+  height: 80px;
   border-radius: 1rem;
 }
 .counter div {
@@ -12135,12 +12136,11 @@ input::placeholder {
       flex-wrap: wrap;
 }
 .pager_block .page a {
-  width: 32px;
-  height: 32px;
+  padding: 8px 12px;
   line-height: 32px;
   vertical-align: middle;
   text-align: center;
-  margin: 0 0.25rem;
+  margin: 0 0.15rem;
   border-radius: 5px;
 }
 .pager_block .page .active {
@@ -12342,7 +12342,7 @@ input::placeholder {
   padding: 0;
 }
 .numpad .btn svg {
-  width: 4.5rem;
+  width: 3.5rem;
 }
 .numpad .result {
   background-color: #fff;
@@ -12356,7 +12356,7 @@ input::placeholder {
   font-weight: bold;
 }
 .numpad .numbers {
-  max-width: 388px;
+  width: 400px;
 }
 .numpad .controlers {
   max-width: 120px;
@@ -12523,6 +12523,12 @@ input::placeholder {
   width: 3.5rem;
   padding: 0.5rem;
 }
+.modal-content .w-35 {
+  width: 35% !important;
+}
+.modal-content .w-65 {
+  width: 65% !important;
+}
 
 .modal-body {
   padding: 1.25rem 3rem;
@@ -12550,7 +12556,7 @@ input::placeholder {
   margin: 0;
 }
 .modal-body .operate .btn_block .btn {
-  padding: 0.2rem 0.5rem;
+  padding: 0.5rem 0.5rem;
 }
 .modal-body .btn_group {
   font-size: 1.5rem;
@@ -12561,7 +12567,7 @@ input::placeholder {
 }
 
 .modal-lg.calc {
-  max-width: 630px;
+  max-width: 650px;
 }
 .modal-lg.calc .modal-body {
   padding: 0 60px 70px;
