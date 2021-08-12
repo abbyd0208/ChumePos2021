@@ -1,18 +1,23 @@
 // 首頁用
 .index {
+
+  .only-md{ display: none;}
+
   .main_box {
     padding: 1.5rem;
   }
+  .col-5{ height: 100%;}
   .control_list {
     height: 100%;
     padding: 0 1rem;
     margin-top: -8px;
+    overflow: hidden;
+    overflow-y: scroll;
   }
 
   .menu_block {
-    height: calc(1620px - 130px);
-    overflow: hidden;
-    overflow-y: scroll;
+    // height: calc(1620px - 130px);
+    padding-right: 0px;
     .btn em {
       vertical-align: middle;
     }
@@ -20,8 +25,9 @@
 
   // 第二種螢幕1920寬樣式
   @include secondary-device {
+    .only-md{ display: inline-block;}
     .menu_block {
-      height: calc(1200px - 130px);
+      // height: calc(1200px - 130px);
     }
   }
 
