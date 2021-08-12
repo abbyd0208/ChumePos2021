@@ -69,9 +69,16 @@
   border-top: 0px;
 }
 
-.modal-lg.calc {
-  max-width: 650px;
-  .modal-body {
-    padding: 0 60px 70px;
+.calc {
+  z-index: 1052;
+  .modal-lg {
+    max-width: 650px;
+    .modal-body {
+      padding: 0 60px 70px;
+    }
   }
+}
+
+.modal-backdrop + .modal-backdrop {
+  z-index: 1051;
 }

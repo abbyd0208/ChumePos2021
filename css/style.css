@@ -12546,11 +12546,18 @@ input::placeholder {
   border-top: 0px;
 }
 
-.modal-lg.calc {
+.calc {
+  z-index: 1052;
+}
+.calc .modal-lg {
   max-width: 650px;
 }
-.modal-lg.calc .modal-body {
+.calc .modal-lg .modal-body {
   padding: 0 60px 70px;
+}
+
+.modal-backdrop + .modal-backdrop {
+  z-index: 1051;
 }
 
 /* Slider */
