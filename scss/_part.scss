@@ -85,7 +85,7 @@
 ._icon {
   margin-right: 0.5rem;
   display: inline-block;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 
   svg {
     @include icon($primary-light, inherit);
@@ -277,12 +277,11 @@ $transition-default: 0.25s ease-out 0.1s;
   // *{ border:1px solid #000;}
   .page {
     a {
-      width: 32px;
-      height: 32px;
+      padding: 8px 12px;
       line-height: 32px;
       vertical-align: middle;
       text-align: center;
-      margin: 0 0.25rem;
+      margin: 0 0.15rem;
       border-radius: 5px;
     }
 
@@ -502,7 +501,7 @@ $transition-default: 0.25s ease-out 0.1s;
     overflow: hidden;
     padding: 0;
     svg {
-      width: 4.5rem;
+      width: 3.5rem;
     }
   }
 
@@ -519,7 +518,7 @@ $transition-default: 0.25s ease-out 0.1s;
   }
 
   .numbers {
-    max-width: 388px;
+    width: 400px;
   }
 
   .controlers {
