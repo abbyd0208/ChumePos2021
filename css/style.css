@@ -12867,8 +12867,10 @@ input::placeholder {
   margin-right: 0;
 }
 .order_block .card_list {
-  height: calc(100% - 178px);
+  height: calc(100% - 203px);
   overflow-y: scroll;
+  margin-right: -15px;
+  padding-right: 15px;
 }
 .order_block .sort_list {
   margin: 0 auto 20px;
@@ -12924,7 +12926,7 @@ input::placeholder {
 }
 .order_block .product_panel {
   width: 100%;
-  height: calc(100% - 276px);
+  height: calc(100% - 268px);
   padding: 8px;
   overflow: hidden;
   display: -webkit-box;
@@ -12961,8 +12963,15 @@ input::placeholder {
   height: 100%;
 }
 .order_block .product_panel .interetControl_list .reason_list {
-  padding: 20px 15px;
-  height: calc(100% - 110px);
+  padding: 20px 0 20px 15px;
+  height: calc(100% - 138px);
+  overflow: hidden;
+}
+.order_block .product_panel .interetControl_list .reason_list h5 {
+  color: #0e5557;
+}
+.order_block .product_panel .interetControl_list .reason_list .list_box {
+  height: calc(100% 68px);
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -13057,4 +13066,3 @@ input::placeholder {
   left: 0px;
   bottom: 0px;
 }
-/*# sourceMappingURL=style.css.map */
