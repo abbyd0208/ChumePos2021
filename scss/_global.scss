@@ -6,9 +6,6 @@
 
 html {
   font-size: $font-size-base;
-  @include secondary-device {
-    font-size: $font-size-base-2;
-  }
 }
 
 * {
@@ -21,11 +18,8 @@ html {
 
 body {
   font-family: 'Roboto', 'Noto Sans TC', $font-family-sans-serif;
-  // overflow-x: hidden;
   line-height: 1.8;
   position: relative;
-  // font-size:150%;  //font-basic 24px
-  // font-size: $font-size-base;
 
   &.fixed {
     overflow: hidden;
@@ -89,17 +83,9 @@ input::placeholder {
   @include flex-alignCenter;
   color: $main-gray;
   background-color: $white;
-  // position: fixed;
-  // top: 0;
-  // left: 50%;
-  // z-index: 1000;
-  // transform: translateX(-50%);
-  // width: 2160px;
   width: 100%;
   padding: 20px;
   border-radius: 0 0 10px 10px;
-  // margin-bottom: 30px;
-  // background-color: $white;
 
   .info {
     @include flex-alignCenter;
@@ -119,11 +105,6 @@ input::placeholder {
     align-items: center;
     font-weight: bold;
     margin-left: auto;
-    // font-size:1.2rem;
-  }
-
-  @include secondary-device {
-    background-color: red;
   }
 }
 
@@ -151,23 +132,18 @@ input::placeholder {
 }
 
 .content {
-  border: 1px solid hotpink;
   background-color: $bg-gray;
-  width: 2160px;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
 
+  //螢幕尺寸1
+  // width:2160px;
+  // height: 1620px;
+
+  //螢幕尺寸2
   // width: 1920px;
   // height: 1200px;
-
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.content_customer {
-  border: 1px solid purple;
-  width: 1024px;
-  height: 768px;
-  margin: 0 auto;
 }
 
 .inner_content {
@@ -175,5 +151,4 @@ input::placeholder {
   // margin-top: 150px;
   @include Dflex;
   height: calc(100vh - 130px); //扣掉header高度
-  border: 1px solid cornflowerblue;
 }
